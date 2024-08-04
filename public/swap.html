@@ -1,0 +1,1000 @@
+<!DOCTYPE html><html lang="en" class="dark"
+  style="--w3m-color-fg-1: rgb(228,231,231); --w3m-color-fg-2: rgb(148,158,158); --w3m-color-fg-3: rgb(110,119,119); --w3m-color-bg-1: rgb(20,20,20); --w3m-color-bg-2: rgb(39,42,42); --w3m-color-bg-3: rgb(59,64,64); --w3m-color-overlay: rgba(255,255,255,0.1); --w3m-accent-color: #3396FF; --w3m-accent-fill-color: #FFFFFF; --w3m-z-index: 89; --w3m-background-color: #3396FF; --w3m-background-border-radius: 8px; --w3m-container-border-radius: 30px; --w3m-wallet-icon-border-radius: 15px; --w3m-wallet-icon-large-border-radius: 30px; --w3m-wallet-icon-small-border-radius: 7px; --w3m-input-border-radius: 28px; --w3m-button-border-radius: 10px; --w3m-notification-border-radius: 36px; --w3m-secondary-button-border-radius: 28px; --w3m-icon-button-border-radius: 50%; --w3m-button-hover-highlight-border-radius: 10px; --w3m-text-big-bold-size: 20px; --w3m-text-big-bold-weight: 600; --w3m-text-big-bold-line-height: 24px; --w3m-text-big-bold-letter-spacing: -0.03em; --w3m-text-big-bold-text-transform: none; --w3m-text-xsmall-bold-size: 10px; --w3m-text-xsmall-bold-weight: 700; --w3m-text-xsmall-bold-line-height: 12px; --w3m-text-xsmall-bold-letter-spacing: 0.02em; --w3m-text-xsmall-bold-text-transform: uppercase; --w3m-text-xsmall-regular-size: 12px; --w3m-text-xsmall-regular-weight: 600; --w3m-text-xsmall-regular-line-height: 14px; --w3m-text-xsmall-regular-letter-spacing: -0.03em; --w3m-text-xsmall-regular-text-transform: none; --w3m-text-small-thin-size: 14px; --w3m-text-small-thin-weight: 500; --w3m-text-small-thin-line-height: 16px; --w3m-text-small-thin-letter-spacing: -0.03em; --w3m-text-small-thin-text-transform: none; --w3m-text-small-regular-size: 14px; --w3m-text-small-regular-weight: 600; --w3m-text-small-regular-line-height: 16px; --w3m-text-small-regular-letter-spacing: -0.03em; --w3m-text-small-regular-text-transform: none; --w3m-text-medium-regular-size: 16px; --w3m-text-medium-regular-weight: 600; --w3m-text-medium-regular-line-height: 20px; --w3m-text-medium-regular-letter-spacing: -0.03em; --w3m-text-medium-regular-text-transform: none; --w3m-font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif; --w3m-success-color: rgb(38,181,98); --w3m-error-color: rgb(242, 90, 103); --w3m-background-image-url: none;"
+  data-scrapbook-source="https://www.shezmu.io/nile"
+  data-scrapbook-create="20240803225155206"
+  data-scrapbook-title="Shezmu | Leveraging Yield"
+  data-scrapbook-adoptedstylesheet-0="*, ::after, ::before { margin: 0px; padding: 0px; box-sizing: border-box; font-style: normal; text-rendering: optimizespeed; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; backface-visibility: hidden; }
+
+button { cursor: pointer; display: flex; justify-content: center; align-items: center; position: relative; border: none; background-color: transparent; transition: 0.2s; }
+
+@media (hover: hover) and (pointer: fine) {
+  button:active { transition: 0.1s; transform: scale(0.93); }
+}
+
+button::after { content: &quot;&quot;; position: absolute; inset: 0px; transition: background-color, 0.2s; }
+
+button:disabled { cursor: not-allowed; }
+
+button svg, button w3m-text { position: relative; z-index: 1; }
+
+input { border: none; outline: 0px; appearance: none; }
+
+img { display: block; }
+
+::selection { color: var(--w3m-accent-fill-color); background: var(--w3m-accent-color); }"
+  data-scrapbook-adoptedstylesheet-1=":host { all: initial; }
+
+.w3m-overlay { inset: 0px; position: fixed; z-index: var(--w3m-z-index); overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, 0.3); opacity: 0; pointer-events: none; }
+
+@media (max-height: 720px) and (orientation: landscape) {
+  .w3m-overlay { overflow: scroll; align-items: flex-start; padding: 20px 0px; }
+}
+
+.w3m-active { pointer-events: auto; }
+
+.w3m-container { position: relative; max-width: 360px; width: 100%; outline: 0px; border-radius: var(--w3m-background-border-radius) var(--w3m-background-border-radius) var(--w3m-container-border-radius) var(--w3m-container-border-radius); border: 1px solid var(--w3m-color-overlay); overflow: hidden; }
+
+.w3m-card { width: 100%; position: relative; border-radius: var(--w3m-container-border-radius); overflow: hidden; box-shadow: 0 6px 14px -6px rgba(10,16,31,.12),0 10px 32px -4px rgba(10,16,31,.1),0 0 0 1px var(--w3m-color-overlay); background-color: var(--w3m-color-bg-1); color: var(--w3m-color-fg-1); }
+
+@media (max-width: 600px) {
+  .w3m-container { max-width: 440px; border-radius: var(--w3m-background-border-radius) var(--w3m-background-border-radius) 0 0; }
+  .w3m-card { border-radius: var(--w3m-container-border-radius) var(--w3m-container-border-radius) 0 0; }
+  .w3m-overlay { align-items: flex-end; }
+}
+
+@media (max-width: 440px) {
+  .w3m-container { border: 0px; }
+}"> <head><script src="./228.js"></script><meta
+      charset="UTF-8"><meta name="viewport"
+      content="width=device-width, initial-scale=1"><link rel="stylesheet"
+      href="a07bf4daed179dee.css" data-precedence="next"><link rel="stylesheet"
+      href="0885fe86a914a8a9.css" data-precedence="next"><link rel="icon"
+      href="favicon.ico"><title>Shezmu | Leveraging Yield</title><meta
+      name="description"
+      content="Shezmu is the first multi-asset CDP being built atop LayerZero. Deposit and borrow against yield-bearing assets and NFTs at Shezmu."><meta
+      name="theme-color" media="(prefers-color-scheme: light)"
+      content="white"><meta name="theme-color"
+      media="(prefers-color-scheme: dark)" content="black"><meta
+      property="og:title" content="Shezmu | Leveraging Yield"><meta
+      property="og:description"
+      content="Shezmu is the first multi-asset CDP being built atop LayerZero. Deposit and borrow against yield-bearing assets and NFTs at Shezmu."><meta
+      property="og:image:alt"
+      content="Shezmu is the first multi-asset CDP being built atop LayerZero. Deposit and borrow against yield-bearing assets and NFTs at Shezmu."><meta
+      property="og:image:type" content="image/png"><meta property="og:image"
+      content="https://shezmu-app-liesmch8p-core-team1.vercel.app/opengraph-image?0759620a0fe2af41"><meta
+      property="og:image:width" content="1200"><meta property="og:image:height"
+      content="630"><meta name="twitter:card"
+      content="summary_large_image"><meta name="twitter:title"
+      content="Shezmu | Leveraging Yield"><meta name="twitter:description"
+      content="Shezmu is the first multi-asset CDP being built atop LayerZero. Deposit and borrow against yield-bearing assets and NFTs at Shezmu."><meta
+      name="twitter:image" content="https://shezmu.io/opengraph-image"><meta
+      name="twitter:image:width" content="1200"><meta
+      name="twitter:image:height" content="630"><meta name="twitter:image:alt"
+      content="Shezmu"><link rel="icon" href="favicon.ico" type="image/x-icon"
+      sizes="16x16"><meta name="next-size-adjust"><style
+      data-emotion="css 1mtmiup animation-plwpox"
+      data-s>.css-1mtmiup{all:unset;cursor:pointer;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;border-radius:8px;padding:14px 14px;font-size:16px;font-weight:500;box-sizing:border-box;-webkit-tap-highlight-color:transparent;line-height:normal;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:border 200ms ease;transition:border 200ms ease;gap:0;background:hsl(256, 6.0%, 93.2%);color:hsl(230deg 11.63% 8.43%);-webkit-animation:animation-plwpox 300ms ease;animation:animation-plwpox 300ms ease;}.css-1mtmiup:active{-webkit-transform:translateY(1px);-moz-transform:translateY(1px);-ms-transform:translateY(1px);transform:translateY(1px);}.css-1mtmiup[disabled]{cursor:not-allowed;}@-webkit-keyframes animation-plwpox{from{opacity:0;}to{opacity:1;}}@keyframes animation-plwpox{from{opacity:0;}to{opacity:1;}}</style><style
+      data-emotion="css w3jvbs animation-uey69n"
+      data-s>.css-w3jvbs{-webkit-animation:animation-uey69n 2s linear infinite;animation:animation-uey69n 2s linear infinite;width:1em;height:1em;}@-webkit-keyframes animation-uey69n{100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}@keyframes animation-uey69n{100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}</style><style
+      data-emotion="css 1s0kaq5 animation-dfl6wh"
+      data-s>.css-1s0kaq5{stroke-linecap:round;-webkit-animation:animation-dfl6wh 1.5s ease-in-out infinite;animation:animation-dfl6wh 1.5s ease-in-out infinite;}@-webkit-keyframes animation-dfl6wh{0%{stroke-dasharray:1,150;stroke-dashoffset:0;}50%{stroke-dasharray:90,150;stroke-dashoffset:-35;}100%{stroke-dasharray:90,150;stroke-dashoffset:-124;}}@keyframes animation-dfl6wh{0%{stroke-dasharray:1,150;stroke-dashoffset:0;}50%{stroke-dasharray:90,150;stroke-dashoffset:-35;}100%{stroke-dasharray:90,150;stroke-dashoffset:-124;}}</style><style
+      type="text/css">.lf-progress {
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  width: 100%;
+  /* margin: 0 10px; */
+  height: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.lf-progress:focus {
+  outline: none;
+  border: none;
+}
+.lf-progress::-moz-range-track {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+.lf-progress::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-moz-range-thumb {
+  -moz-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-ms-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.lf-progress::-ms-fill-lower {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-fill-upper {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-thumb {
+  border: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress:focus::-ms-fill-lower {
+  background: #ccc;
+}
+.lf-progress:focus::-ms-fill-upper {
+  background: #ccc;
+}
+.lf-player-container :focus {
+  outline: 0;
+}
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-player-btn-container {
+  display: flex;
+  align-items: center;
+}
+.lf-player-btn {
+  cursor: pointer;
+  fill: #999;
+  width: 14px;
+}
+
+.lf-player-btn.active {
+  fill: #555;
+}
+
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 1;
+
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+  padding: 10px;
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-arrow {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  bottom: -9px;
+  border-style: solid;
+  border-width: 10px 10px 0px 10px;
+}
+
+.lf-left-align,
+.lf-left-align .lfarrow {
+  left: 0;
+  right: unset;
+}
+
+.lf-right-align,
+.lf-right-align .lf-arrow {
+  right: 0;
+  left: unset;
+}
+
+.lf-text-input {
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  padding: 3px;
+  width: 60px;
+  margin: 0;
+}
+
+.lf-color-picker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 90px;
+}
+
+.lf-color-selectors {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lf-color-component {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.lf-color-component strong {
+  width: 40px;
+}
+
+.lf-color-component input[type='range'] {
+  margin: 0 0 0 10px;
+}
+
+.lf-color-component input[type='number'] {
+  width: 50px;
+  margin: 0 0 0 10px;
+}
+
+.lf-color-preview {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5px;
+}
+
+.lf-preview {
+  height: 60px;
+  width: 60px;
+}
+
+.lf-popover-snapshot {
+  width: 150px;
+}
+.lf-popover-snapshot h5 {
+  margin: 5px 0 10px 0;
+  font-size: 0.75rem;
+}
+.lf-popover-snapshot a {
+  display: block;
+  text-decoration: none;
+}
+.lf-popover-snapshot a:before {
+  content: '⥼';
+  margin-right: 5px;
+}
+.lf-popover-snapshot .lf-note {
+  display: block;
+  margin-top: 10px;
+  color: #999;
+}
+.lf-player-controls > div {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.lf-player-controls > div:first-child {
+  margin-left: 0px;
+}
+.lf-player-controls > div:last-child {
+  margin-right: 0px;
+}
+</style>  </head><body
+    class="__variable_dd4b18 __variable_da1155 __variable_b1da2a"><div
+      data-overlay-container="true"><main
+        class="dark text-foreground min-h-[100dvh] items-center bg-[#050508]"><nav
+          class="flex z-40 w-full h-auto items-center justify-center data-[menu-open=true]:border-none top-0 inset-x-0 backdrop-blur-lg data-[menu-open=true]:backdrop-blur-xl backdrop-saturate-150 bg-black/50 fixed"
+          style="--navbar-height: 4rem; transform: translateY(0%) translateZ(0px);"><header
+            class="z-40 flex px-6 gap-4 w-full flex-row relative flex-nowrap items-center justify-between h-[var(--navbar-height)] max-w-full"><ul
+              class="flex gap-4 h-full flex-row flex-nowrap items-center data-[justify=start]:justify-start data-[justify=start]:flex-grow data-[justify=start]:basis-0 data-[justify=center]:justify-center data-[justify=end]:justify-end data-[justify=end]:flex-grow data-[justify=end]:basis-0"
+              data-justify="start"><button
+                class="group flex items-center justify-center w-6 h-full rounded-small tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 sm:hidden"
+                type="button" aria-label="Open menu" aria-pressed="false"><span
+                  class="sr-only">open navigation menu</span><span
+                  class="w-full h-full pointer-events-none flex flex-col items-center justify-center text-inherit group-data-[pressed=true]:opacity-70 transition-opacity before:content-[''] before:block before:h-px before:w-6 before:bg-current before:transition-transform before:duration-150 before:-translate-y-1 before:rotate-0 group-data-[open=true]:before:translate-y-px group-data-[open=true]:before:rotate-45 after:content-[''] after:block after:h-px after:w-6 after:bg-current after:transition-transform after:duration-150 after:translate-y-1 after:rotate-0 group-data-[open=true]:after:translate-y-0 group-data-[open=true]:after:-rotate-45"></span></button><div
+                class="flex basis-0 flex-row flex-grow flex-nowrap justify-start bg-transparent items-center no-underline text-medium whitespace-nowrap box-border"><a
+                  class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-foreground no-underline hover:opacity-80 active:opacity-disabled transition-opacity"
+                  tabindex="0" role="link" href="https://www.shezmu.io/"><img
+                    alt="Shezmu Logo" loading="lazy" width="142" height="24"
+                    decoding="async" data-nimg="1" style="color:transparent"
+                    srcset="logo_nav-2.png 1x, logo_nav.png 2x"
+                    src="logo_nav.png"></a></div></ul><ul
+              class="h-full flex-row flex-nowrap items-center data-[justify=start]:justify-start data-[justify=start]:flex-grow data-[justify=start]:basis-0 data-[justify=center]:justify-center data-[justify=end]:justify-end data-[justify=end]:flex-grow data-[justify=end]:basis-0 hidden sm:flex gap-12"
+              data-justify="center"><div
+                class="flex flex-col items-center justify-center"><a
+                  class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-foreground no-underline hover:opacity-80 active:opacity-disabled transition-opacity font-montserrat font-extrabold uppercase"
+                  tabindex="0" role="link" href="./index.html"
+                  style="user-select: none;">Borrow</a><div
+                  class="absolute mt-8 h-2 w-2 rounded-full"></div></div><div
+                class="flex flex-col items-center justify-center"><a
+                  class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-foreground no-underline hover:opacity-80 active:opacity-disabled transition-opacity font-montserrat font-extrabold uppercase"
+                  tabindex="0" role="link" href="./mint.html"
+                  style="user-select: none;">Mint</a><div
+                  class="absolute mt-8 h-2 w-2 rounded-full"></div></div><div
+                class="flex flex-col items-center justify-center"><a
+                  class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-foreground no-underline hover:opacity-80 active:opacity-disabled transition-opacity font-montserrat font-extrabold uppercase"
+                  tabindex="0" role="link" href
+                  style="user-select: none;">Swap</a><div
+                  class="absolute mt-8 h-2 w-2 rounded-full bg-syellow-light"></div></div></ul><ul
+              class="flex gap-4 h-full flex-row flex-nowrap items-center data-[justify=start]:justify-start data-[justify=start]:flex-grow data-[justify=start]:basis-0 data-[justify=center]:justify-center data-[justify=end]:justify-end data-[justify=end]:flex-grow data-[justify=end]:basis-0"
+              data-justify="end"><li
+                class="text-medium whitespace-nowrap box-border list-none data-[active=true]:font-semibold"><div
+                  class="gap-4 hidden sm:flex"><a target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://twitter.com/ShezmuTech"><svg
+                      stroke="currentColor" fill="currentColor" stroke-width="0"
+                      role="img" viewBox="0 0 24 24" class="w-5 h-5"
+                      height="1em" width="1em"
+                      xmlns="http://www.w3.org/2000/svg"><title></title><path
+                        d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg></a><a
+                    target="_blank" rel="noopener noreferrer"
+                    href="https://t.me/shezmueth"><svg stroke="currentColor"
+                      fill="currentColor" stroke-width="0" role="img"
+                      viewBox="0 0 24 24" class="w-5 h-5" height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"><title></title><path
+                        d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path></svg></a><a
+                    target="_blank" rel="noopener noreferrer"
+                    href="https://shezmu.gitbook.io/shezmu/introduction/welcome-to-shezmu"><svg
+                      stroke="currentColor" fill="currentColor" stroke-width="0"
+                      role="img" viewBox="0 0 24 24" class="w-5 h-5"
+                      height="1em" width="1em"
+                      xmlns="http://www.w3.org/2000/svg"><title></title><path
+                        d="M10.802 17.77a.703.703 0 11-.002 1.406.703.703 0 01.002-1.406m11.024-4.347a.703.703 0 11.001-1.406.703.703 0 01-.001 1.406m0-2.876a2.176 2.176 0 00-2.174 2.174c0 .233.039.465.115.691l-7.181 3.823a2.165 2.165 0 00-1.784-.937c-.829 0-1.584.475-1.95 1.216l-6.451-3.402c-.682-.358-1.192-1.48-1.138-2.502.028-.533.212-.947.493-1.107.178-.1.392-.092.62.027l.042.023c1.71.9 7.304 3.847 7.54 3.956.363.169.565.237 1.185-.057l11.564-6.014c.17-.064.368-.227.368-.474 0-.342-.354-.477-.355-.477-.658-.315-1.669-.788-2.655-1.25-2.108-.987-4.497-2.105-5.546-2.655-.906-.474-1.635-.074-1.765.006l-.252.125C7.78 6.048 1.46 9.178 1.1 9.397.457 9.789.058 10.57.006 11.539c-.08 1.537.703 3.14 1.824 3.727l6.822 3.518a2.175 2.175 0 002.15 1.862 2.177 2.177 0 002.173-2.14l7.514-4.073c.38.298.853.461 1.337.461A2.176 2.176 0 0024 12.72a2.176 2.176 0 00-2.174-2.174"></path></svg></a></div></li><li
+                class="text-medium whitespace-nowrap box-border list-none data-[active=true]:font-semibold"></li></ul></header></nav><div
+          class><div
+            class="flex flex-1 min-h-[90dvh] h-full w-full justify-center px-4"><img
+              alt="Background" loading="lazy" width="1920" height="1080"
+              decoding="async" data-nimg="1"
+              class="absolute object-fill z-0 blur-md h-[1080px] w-[100vw]"
+              srcset="nile_bg.png 1x, agora_bg.png 2x" src="agora_bg.png"
+              style="color: transparent; mask-image: linear-gradient(rgb(0, 0, 0) 50%, transparent); user-select: none; pointer-events: none;"><div
+              class="flex flex-col gap-8 w-full items-center z-10 mt-12"><div
+                class="w-full h-72 max-w-4xl flex flex-col gap-4 sm:gap-8 z-10 border-2 border-[#F3D567] bg-white/10 backdrop-blur-lg rounded-3xl mt-12 sm:mt-16 py-4 items-center justify-center"><div
+                  class="w-full absolute inset-0 hidden sm:flex items-center justify-between"><div
+                    class="relative shadow-black/5 shadow-none rounded-large"
+                    style="max-width: 151px;"> <img alt="Shezmu Guardian"
+                      loading="lazy" width="151" height="180" decoding="async"
+                      data-nimg="1"
+                      class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 max-h-60 object-contain object-left rounded-none"
+                      srcset="header_left.png 1x, header_left-1.png 2x"
+                      src="header_left-1.png" style="color: transparent;"
+                      data-loaded="true"></div><div
+                    class="relative shadow-black/5 shadow-none rounded-large"
+                    style="max-width: 151px;"> <img alt="Shezmu Guardian"
+                      loading="lazy" width="151" height="180" decoding="async"
+                      data-nimg="1"
+                      class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 max-h-60 object-contain object-right rounded-none"
+                      srcset="header_right-1.png 1x, header_right.png 2x"
+                      src="header_right.png" style="color: transparent;"
+                      data-loaded="true"></div></div><div
+                  class="flex flex-col gap-4 items-center font-montserrat z-10 p-2"><h1
+                    class="font-extrabold text-2xl sm:text-4xl">NILE</h1><h2
+                    class="font-bold text-xl sm:text-2xl text-syellow-base text-center max-w-md">Acquire
+                    Shezmu using our cross-chain swap, fiat on-ramp and OTC
+                    Market!</h2></div><div
+                  class="w-full absolute inset-0 flex items-end justify-center gap-4"><a
+                    class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium no-underline hover:opacity-80 active:opacity-disabled transition-opacity bg-syellow-base rounded-t-lg py-1 px-6 sm:px-10 text-black font-bold font-montserrat"
+                    tabindex="0" role="link"
+                    href="https://www.shezmu.io/marketplace">Marketplace</a></div></div><div
+                class="flex w-full flex-col max-w-5xl"><div data-slot="base"
+                  class="inline-flex rounded-xl" aria-label="Options"><div
+                    data-slot="tabList"
+                    class="flex h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide w-full relative rounded-none p-0 border-b border-divider justify-evenly sm:justify-between first:rounded-tl-2xl last:rounded-tr-2xl bg-[#343432]"
+                    id="react-aria1411531078-:r8o:" aria-label="Options"
+                    role="tablist" aria-orientation="horizontal"><button
+                      data-selected="true" data-slot="tab" tabindex="0"
+                      data-key="cswap" id="react-aria1411531078-:r8o:-tab-cswap"
+                      aria-selected="true"
+                      aria-controls="react-aria1411531078-:r8o:-tabpanel-cswap"
+                      role="tab"
+                      class="z-0 py-1 group relative cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 rounded-small text-xs sm:text-xl font-montserrat font-bold h-8 sm:h-14 sm:w-full px-0.5 sm:px-2 uppercase w-full flex items-center justify-center"
+                      type="button"><span
+                        class="absolute z-0 inset-0 bg-background dark:bg-default shadow-small w-full !bg-syellow-base rounded-none"
+                        data-slot="cursor" style="opacity: 1;"></span><div
+                        class="relative z-10 whitespace-nowrap  interact-button transition-colors text-default-500 group-data-[selected=true]:text-black"
+                        data-slot="tabContent"><div
+                          class="flex items-center space-x-1 sm:space-x-2"><svg
+                            stroke="currentColor" fill="currentColor"
+                            stroke-width="0" viewBox="0 0 24 24"
+                            class="h-3 w-3 sm:h-8 sm:w-8" height="1em"
+                            width="1em" xmlns="http://www.w3.org/2000/svg"><path
+                              fill="none" d="M0 0h24v24H0z"></path><path
+                              d="M12.89 11.1c-1.78-.59-2.64-.96-2.64-1.9 0-1.02 1.11-1.39 1.81-1.39 1.31 0 1.79.99 1.9 1.34l1.58-.67c-.15-.45-.82-1.92-2.54-2.24V5h-2v1.26c-2.48.56-2.49 2.86-2.49 2.96 0 2.27 2.25 2.91 3.35 3.31 1.58.56 2.28 1.07 2.28 2.03 0 1.13-1.05 1.61-1.98 1.61-1.82 0-2.34-1.87-2.4-2.09l-1.66.67c.63 2.19 2.28 2.78 2.9 2.96V19h2v-1.24c.4-.09 2.9-.59 2.9-3.22 0-1.39-.61-2.61-3.01-3.44zM3 21H1v-6h6v2H4.52c1.61 2.41 4.36 4 7.48 4a9 9 0 009-9h2c0 6.08-4.92 11-11 11-3.72 0-7.01-1.85-9-4.67V21zm-2-9C1 5.92 5.92 1 12 1c3.72 0 7.01 1.85 9 4.67V3h2v6h-6V7h2.48C17.87 4.59 15.12 3 12 3a9 9 0 00-9 9H1z"></path></svg><span
+                            class="hidden sm:block">Cross-Chain
+                          </span><span>Swap</span></div></div></button><button
+                      data-slot="tab" tabindex="-1" data-key="onramp"
+                      id="react-aria1411531078-:r8o:-tab-onramp"
+                      aria-selected="false" role="tab"
+                      class="z-0 py-1 group relative cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 rounded-small text-xs sm:text-xl font-montserrat font-bold h-8 sm:h-14 sm:w-full px-0.5 sm:px-2 uppercase w-full flex items-center justify-center"
+                      type="button"><div
+                        class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-black"
+                        data-slot="tabContent"><div
+                          class="flex items-center space-x-1 sm:space-x-2"><svg
+                            stroke="currentColor" fill="currentColor"
+                            stroke-width="0" role="img" viewBox="0 0 24 24"
+                            class="h-3 w-3 sm:h-8 sm:w-8" height="1em"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"><title></title><path
+                              d="M12.468.186a.7.7 0 0 0-.95 0L1.924 9.193a1.705 1.705 0 0 0-.475 1.095v3.59c0 .358.214.452.475.207l9.601-9.01a.705.705 0 0 1 .95 0l9.603 9.01c.262.245.475.151.475-.207v-3.59a1.71 1.71 0 0 0-.475-1.095zm0 9.783a.705.705 0 0 0-.95 0l-9.595 9.002a1.705 1.705 0 0 0-.475 1.094v3.59c0 .358.214.453.475.208l9.601-9.007a.701.701 0 0 1 .95 0l9.603 9.008c.262.244.475.15.475-.208v-3.59a1.71 1.71 0 0 0-.475-1.094Z"></path></svg><span
+                            class="hidden sm:block">Fiat
+                          </span><span>On-Ramp</span></div></div></button><button
+                      data-slot="tab" tabindex="-1" data-key="ydf"
+                      id="react-aria1411531078-:r8o:-tab-ydf"
+                      aria-selected="false" role="tab"
+                      class="z-0 py-1 group relative cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 rounded-small text-xs sm:text-xl font-montserrat font-bold h-8 sm:h-14 sm:w-full px-0.5 sm:px-2 uppercase w-full flex flex-col gap-2 items-center justify-center"
+                      type="button"><div
+                        class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-black"
+                        data-slot="tabContent"><div
+                          class="flex items-center space-x-1 sm:space-x-2"><img
+                            typeof="svg" alt="YDF" loading="lazy" width="12"
+                            height="12" decoding="async" data-nimg="1"
+                            class="h-3 w-3 sm:h-8 sm:w-8" src="YDF.svg"
+                            style="color: transparent;"><span>YDF</span><span
+                            class="hidden sm:block">OTC</span></div></div></button></div></div><div
+                  data-focus="false" data-focus-visible="false"
+                  id="react-aria1411531078-:r8o:-tabpanel-cswap"
+                  aria-labelledby="react-aria1411531078-:r8o:-tab-cswap"
+                  role="tabpanel"
+                  class="py-3 px-1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 bg-gradient-to-b from-[#343432] from-50% to-transparent w-full flex items-center justify-center"
+                  data-slot="panel"><div
+                    class="w-full max-w-md min-h-[600px] mt-4"><div
+                      id="squid-widget"
+                      style="min-height: 684px; width: 100%;"><link
+                        href="css2.css" rel="stylesheet"><div
+                        class="tw-rounded-box tw-relative tw-flex  interact-button tw-h-full tw-w-full tw-flex-col tw-gap-4 tw-overflow-hidden tw-bg-neutral tw-font-inter tw-text-base-content tw-bg-opacity-80"
+                        style="--nc: 210 11% 65%; --bc: 0 100% 100%; --b1: 0 0% 0%; --b2: 0 0% 0%; --b3: 0 0% 0%; --er: 5 80% 65%; --wa: 32 100% 67%; --p: 47 93% 64%; --pc: 47 100% 13%; --pf: 47 93% 51%; --s: 51 100% 66%; --sf: 51 100% 53%; --sc: 222 27% 76%; --n: 207 26% 7%; --su: 113 49% 55%; --rounded-btn: 24px; --rounded-box: 20px; --rounded-dropdown: 20px; max-width: 440px; max-height: 684px; height: 684px; min-height: 684px; pointer-events: auto;"><div
+                          id="squid-widget-header"
+                          class="tw-rounded-t-box tw-flex tw-flex-row tw-items-center tw-justify-between tw-px-4 tw-bg-opacity-[0.85]"
+                          style="height: 60px; padding-top: 16px; padding-bottom: 16px;"><span
+                            id="squid-header-logo"
+                            class="tw-flex tw-min-w-[65px] tw-flex-row tw-items-center tw-justify-start"><span
+                              class="tw-flex tw-flex-row tw-gap-3 tw-text-sm"></span></span><span
+                            id="squid-header-title"
+                            class="tw-text-xl tw-font-semibold"
+                            style="color: rgb(255, 253, 253);">Swap</span><span
+                            class="tw-flex tw-min-w-[65px] tw-flex-row tw-items-center tw-justify-end"><span
+                              class="tw-flex tw-flex-row tw-gap-3 tw-text-sm"><a><button
+                                  id="squid-icon-button" type="button"
+                                  class="transition-all tw-group tw-flex tw-items-center tw-justify-center tw-rounded-full tw-bg-base-200 tw-p-2 tw-text-neutral-content tw-bg-opacity-50"><svg
+                                    stroke="currentColor" fill="currentColor"
+                                    stroke-width="0" viewBox="0 0 512 512"
+                                    class="transition-all" height="16"
+                                    width="16"
+                                    xmlns="http://www.w3.org/2000/svg"><path
+                                      d="M504 255.531c.253 136.64-111.18 248.372-247.82 248.468-59.015.042-113.223-20.53-155.822-54.911-11.077-8.94-11.905-25.541-1.839-35.607l11.267-11.267c8.609-8.609 22.353-9.551 31.891-1.984C173.062 425.135 212.781 440 256 440c101.705 0 184-82.311 184-184 0-101.705-82.311-184-184-184-48.814 0-93.149 18.969-126.068 49.932l50.754 50.754c10.08 10.08 2.941 27.314-11.313 27.314H24c-8.837 0-16-7.163-16-16V38.627c0-14.254 17.234-21.393 27.314-11.314l49.372 49.372C129.209 34.136 189.552 8 256 8c136.81 0 247.747 110.78 248 247.531zm-180.912 78.784l9.823-12.63c8.138-10.463 6.253-25.542-4.21-33.679L288 256.349V152c0-13.255-10.745-24-24-24h-16c-13.255 0-24 10.745-24 24v135.651l65.409 50.874c10.463 8.137 25.541 6.253 33.679-4.21z"></path></svg></button></a><a><button
+                                  id="squid-icon-button" type="button"
+                                  class="transition-all tw-group tw-flex tw-items-center tw-justify-center tw-rounded-full tw-bg-base-200 tw-p-2 tw-text-neutral-content tw-bg-opacity-50"><svg
+                                    stroke="currentColor" fill="currentColor"
+                                    stroke-width="0" viewBox="0 0 512 512"
+                                    class="transition-all" height="16"
+                                    width="16"
+                                    xmlns="http://www.w3.org/2000/svg"><path
+                                      d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"></path></svg></button></a></span></span></div><div
+                          class="tw-rounded-b-box tw-relative tw-flex tw-h-full tw-grow tw-flex-col"><span
+                            class="tw-flex tw-flex-col"><span
+                              class="tw-flex tw-w-full tw-flex-col tw-items-center tw-gap-3"><span
+                                id="squid-swap-source"
+                                class="tw-flex tw-h-[165px] tw-w-full tw-flex-col tw-px-5"><span
+                                  class="tw-mb-3.5 tw-flex tw-flex-row tw-items-end tw-justify-between"><span
+                                    id="squid-swap-direction-txt"
+                                    class="tw-text-[16px] tw-font-medium tw-text-base-content">From</span><a
+                                    class="tw-flex tw-flex-row tw-justify-end"><button
+                                      type="button"
+                                      class="tw-group tw-dsw-btn-outline tw-dsw-btn-primary tw-dsw-btn-xs tw-dsw-btn tw-h-6.5 tw-w-30 tw-border-none tw-bg-primary tw-px-1"><span
+                                        class="tw-flex tw-flex-row tw-items-center tw-gap-2  tw-text-base tw-font-medium tw-normal-case tw-text-primary-content">connect
+                                        wallet</span></button></a></span><span
+                                  class="tw-rounded-box tw-flex tw-h-full tw-w-full tw-flex-col tw-border-[1px] tw-border-base-300 tw-bg-base-200 tw-px-3 tw-pb-[12px] tw-pt-[10px] tw-bg-opacity-50"><span
+                                    class="tw-flex tw-w-full tw-flex-row tw-items-center tw-gap-2"
+                                    style="margin-bottom: 0.65rem;"><a
+                                      class="tw-w-7/12 sm:tw-w-1/2"><span
+                                        id="squid-dropdown-btn"
+                                        class="tw-flex tw-w-full tw-flex-row tw-items-center"><button
+                                          type="button"
+                                          class="tw-rounded-dropdown tw-dsw-btn  tw-h-[36px] tw-min-h-0 tw-w-full tw-border-none tw-bg-base-100 tw-pl-1 tw-pr-3 tw-text-base tw-font-normal tw-normal-case tw-text-base-content tw-outline-none tw-shadow-[0_4px_12px_rgba(0,0,0,0.1)] tw-bg-opacity-80"><span
+                                            class="tw-flex tw-w-full tw-flex-row tw-items-center tw-justify-between tw-gap-2"><span
+                                              class="tw-flex tw-max-w-[80%] tw-flex-row tw-items-center tw-gap-2"><img
+                                                id="squid-dropdown-icon"
+                                                src="bnb.svg"
+                                                class="tw-h-7 tw-w-7 tw-rounded-full tw-bg-base-100 tw-bg-opacity-60"><span
+                                                id="squid-dropdown-label"
+                                                class="tw-truncate tw-text-xl tw-font-medium tw-text-base-content">BNB
+                                                Chain</span></span><svg
+                                              stroke="currentColor"
+                                              fill="currentColor"
+                                              stroke-width="0"
+                                              viewBox="0 0 16 16" height="1em"
+                                              width="1em"
+                                              xmlns="http://www.w3.org/2000/svg"><path
+                                                fill-rule="evenodd"
+                                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg></span></button></span></a><a
+                                      class="tw-w-5/12 sm:tw-w-1/2"><span
+                                        id="squid-dropdown-btn"
+                                        class="tw-flex tw-w-full tw-flex-row tw-items-center"><button
+                                          type="button"
+                                          class="tw-rounded-dropdown tw-dsw-btn  tw-h-[36px] tw-min-h-0 tw-w-full tw-border-none tw-bg-base-100 tw-pl-1 tw-pr-3 tw-text-base tw-font-normal tw-normal-case tw-text-base-content tw-outline-none tw-shadow-[0_4px_12px_rgba(0,0,0,0.1)] tw-bg-opacity-80"><span
+                                            class="tw-flex tw-w-full tw-flex-row tw-items-center tw-justify-between tw-gap-2"><span
+                                              class="tw-flex tw-max-w-[80%] tw-flex-row tw-items-center tw-gap-2"><img
+                                                id="squid-dropdown-icon"
+                                                src="bnb.svg"
+                                                class="tw-h-7 tw-w-7 tw-rounded-full tw-bg-base-100 tw-bg-opacity-60"><span
+                                                id="squid-dropdown-label"
+                                                class="tw-truncate tw-text-xl tw-font-medium tw-text-base-content">BNB</span></span><svg
+                                              stroke="currentColor"
+                                              fill="currentColor"
+                                              stroke-width="0"
+                                              viewBox="0 0 16 16" height="1em"
+                                              width="1em"
+                                              xmlns="http://www.w3.org/2000/svg"><path
+                                                fill-rule="evenodd"
+                                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg></span></button></span></a></span><span
+                                    class="tw-relative tw-mb-1 tw-flex tw-h-[39px] tw-w-full tw-flex-row tw-items-center"><form><input
+                                        placeholder="0"
+                                        class="disabled:bg-transparent tw-w-full tw-rounded-sm tw-bg-transparent tw-pl-0 tw-text-4xl tw-font-light tw-text-base-content tw-placeholder-base-content focus:tw-outline-none disabled:tw-border-none disabled:tw-outline-none"
+                                        type="string" value></form></span><span
+                                    class="tw-flex tw-flex-row tw-items-center tw-justify-between tw-text-sm"
+                                    style="margin-top: 0.125rem;"><span
+                                      class="tw-flex tw-flex-row tw-items-center tw-gap-1 tw-text-neutral-content"><span><span><span>$</span><span>0</span></span></span></span><span
+                                      class="tw-flex tw-flex-row tw-items-center tw-gap-1"><span
+                                        class="tw-text-neutral-content">Balance:</span><button
+                                        type="button"
+                                        class="tw-text-sm tw-text-neutral-content"><span><span><span>0</span><span
+                                              class="tw-ml-1">BNB</span></span></span></button></span></span></span></span><span
+                                class="tw-relative tw-flex tw-w-full tw-justify-center"><span
+                                  class="tw-absolute"><button type="button"
+                                    class="w-rounded-md tw-group tw-dsw-btn-primary tw-flex tw-flex-row tw-items-center tw-justify-center tw-bg-primary tw-p-0 tw-text-center"
+                                    style="width: 26px; height: 26px; border-radius: 8px; margin-top: 4px;"><svg
+                                      stroke="currentColor" fill="currentColor"
+                                      stroke-width="0" viewBox="0 0 20 20"
+                                      aria-hidden="true"
+                                      class="tw-text-primary-content tw-transition-all group-hover:tw-rotate-180"
+                                      height="16" width="16"
+                                      xmlns="http://www.w3.org/2000/svg"><path
+                                        fill-rule="evenodd"
+                                        d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path></svg></button></span></span><span
+                                id="squid-swap-destination"
+                                class="tw-flex tw-h-[165px] tw-w-full tw-flex-col tw-px-5"><span
+                                  class="tw-mb-3.5 tw-flex tw-flex-row tw-items-end tw-justify-between"><span
+                                    id="squid-swap-direction-txt"
+                                    class="tw-text-[16px] tw-font-medium tw-text-base-content">To</span><a
+                                    class="tw-flex tw-flex-row tw-justify-end"><button
+                                      type="button"
+                                      class="tw-group tw-dsw-btn-outline tw-dsw-btn-primary tw-dsw-btn-xs tw-dsw-btn tw-h-6.5 tw-w-30 tw-border-none tw-bg-primary tw-px-1"><span
+                                        class="tw-flex tw-flex-row tw-items-center tw-gap-2  tw-text-base tw-font-medium tw-normal-case tw-text-primary-content"><span
+                                          class="tw-flex tw-flex-row tw-items-center tw-gap-1"><span
+                                            class="tw-normal-case">Add
+                                            address</span><svg
+                                            stroke="currentColor"
+                                            fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 24 24"
+                                            aria-hidden="true" height="13"
+                                            width="13"
+                                            xmlns="http://www.w3.org/2000/svg"><path
+                                              fill-rule="evenodd"
+                                              d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z"
+                                              clip-rule="evenodd"></path></svg></span></span></button></a></span><span
+                                  class="tw-rounded-box tw-flex tw-h-full tw-w-full tw-flex-col tw-border-[1px] tw-border-base-300 tw-bg-base-200 tw-px-3 tw-pb-[12px] tw-pt-[10px] tw-bg-opacity-50"><span
+                                    class="tw-flex tw-w-full tw-flex-row tw-items-center tw-gap-2"
+                                    style="margin-bottom: 0.65rem;"><a
+                                      class="tw-w-7/12 sm:tw-w-1/2"><span
+                                        id="squid-dropdown-btn"
+                                        class="tw-flex tw-w-full tw-flex-row tw-items-center"><button
+                                          type="button"
+                                          class="tw-rounded-dropdown tw-dsw-btn  tw-h-[36px] tw-min-h-0 tw-w-full tw-border-none tw-bg-base-100 tw-pl-1 tw-pr-3 tw-text-base tw-font-normal tw-normal-case tw-text-base-content tw-outline-none tw-shadow-[0_4px_12px_rgba(0,0,0,0.1)] tw-bg-opacity-80"><span
+                                            class="tw-flex tw-w-full tw-flex-row tw-items-center tw-justify-between tw-gap-2"><span
+                                              class="tw-flex tw-max-w-[80%] tw-flex-row tw-items-center tw-gap-2"><img
+                                                id="squid-dropdown-icon"
+                                                src="eth.svg"
+                                                class="tw-h-7 tw-w-7 tw-rounded-full tw-bg-base-100 tw-bg-opacity-60"><span
+                                                id="squid-dropdown-label"
+                                                class="tw-truncate tw-text-xl tw-font-medium tw-text-base-content">Ethereum</span></span><svg
+                                              stroke="currentColor"
+                                              fill="currentColor"
+                                              stroke-width="0"
+                                              viewBox="0 0 16 16" height="1em"
+                                              width="1em"
+                                              xmlns="http://www.w3.org/2000/svg"><path
+                                                fill-rule="evenodd"
+                                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg></span></button></span></a><a
+                                      class="tw-w-5/12 sm:tw-w-1/2"><span
+                                        id="squid-dropdown-btn"
+                                        class="tw-flex tw-w-full tw-flex-row tw-items-center"><button
+                                          type="button"
+                                          class="tw-rounded-dropdown tw-dsw-btn  tw-h-[36px] tw-min-h-0 tw-w-full tw-border-none tw-bg-base-100 tw-pl-1 tw-pr-3 tw-text-base tw-font-normal tw-normal-case tw-text-base-content tw-outline-none tw-shadow-[0_4px_12px_rgba(0,0,0,0.1)] tw-bg-opacity-80"><span
+                                            class="tw-flex tw-w-full tw-flex-row tw-items-center tw-justify-between tw-gap-2"><span
+                                              class="tw-flex tw-max-w-[80%] tw-flex-row tw-items-center tw-gap-2"><img
+                                                id="squid-dropdown-icon"
+                                                src="eth.svg"
+                                                class="tw-h-7 tw-w-7 tw-rounded-full tw-bg-base-100 tw-bg-opacity-60"><span
+                                                id="squid-dropdown-label"
+                                                class="tw-truncate tw-text-xl tw-font-medium tw-text-base-content">ETH</span></span><svg
+                                              stroke="currentColor"
+                                              fill="currentColor"
+                                              stroke-width="0"
+                                              viewBox="0 0 16 16" height="1em"
+                                              width="1em"
+                                              xmlns="http://www.w3.org/2000/svg"><path
+                                                fill-rule="evenodd"
+                                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg></span></button></span></a></span><span
+                                    class="tw-relative tw-mb-1 tw-flex tw-h-[39px] tw-w-full tw-flex-row tw-items-center"><span
+                                      class="tw-relative tw-flex tw-w-full tw-items-center tw-text-4xl tw-font-light tw-text-neutral-content"><span><span><span>0</span></span></span></span></span><span
+                                    class="tw-flex tw-flex-row tw-items-center tw-justify-between tw-text-sm"
+                                    style="margin-top: 0.125rem;"><span
+                                      class="tw-flex tw-flex-row tw-items-center tw-gap-1 tw-text-neutral-content"><span><span><span>$</span><span>0</span></span></span></span><span
+                                      class="tw-flex tw-flex-row tw-items-center tw-gap-1"><span
+                                        class="tw-text-neutral-content">Balance:</span><button
+                                        type="button"
+                                        class="tw-text-sm tw-text-neutral-content pointer-events-none"><span><span><span>0</span><span
+                                              class="tw-ml-1">ETH</span></span></span></button></span></span></span></span></span></span><span
+                            class="tw-flex tw-h-full tw-w-full tw-grow tw-flex-col tw-gap-2 tw-pt-4 tw-bg-opacity-0"><span
+                              class="tw-flex tw-flex-col tw-px-5"><span
+                                class="tw-flex tw-w-full tw-flex-row tw-items-center tw-justify-between"><button
+                                  type="button"
+                                  class="tw-flex tw-flex-col"><span
+                                    class="tw-text-sm tw-font-semibold"><span>0.0</span>
+                                    <span class="tw-ml-0.5"></span> </span><span
+                                    class="tw-text-sm tw-text-neutral-content">Estimated
+                                    fee</span></button><span
+                                  class="tw-flex tw-flex-row tw-gap-1.5"><span
+                                    class="tw-flex tw-items-center"><button
+                                      type="button"
+                                      class="tw-flex tw-items-center tw-rounded-md tw-bg-opacity-20 tw-px-1.5 tw-py-[2px] tw-text-sm tw-font-semibold tw-transition-all hover:tw-bg-opacity-30 tw-bg-neutral-content tw-text-neutral-content"
+                                      style="max-height: 22px;"><span
+                                        class="tw-flex tw-flex-row tw-items-center tw-gap-0.5"><svg
+                                          stroke="currentColor"
+                                          fill="currentColor" stroke-width="0"
+                                          viewBox="0 0 24 24" class="tw-p-[3px]"
+                                          height="22" width="22"
+                                          xmlns="http://www.w3.org/2000/svg"><path
+                                            d="M3 19V4C3 3.44772 3.44772 3 4 3H13C13.5523 3 14 3.44772 14 4V12H16C17.1046 12 18 12.8954 18 14V18C18 18.5523 18.4477 19 19 19C19.5523 19 20 18.5523 20 18V11H18C17.4477 11 17 10.5523 17 10V6.41421L15.3431 4.75736L16.7574 3.34315L21.7071 8.29289C21.9024 8.48816 22 8.74408 22 9V18C22 19.6569 20.6569 21 19 21C17.3431 21 16 19.6569 16 18V14H14V19H15V21H2V19H3ZM5 5V11H12V5H5Z"></path></svg><span>OFF</span></span></button></span><span
+                                    class="tw-flex tw-items-center"><button
+                                      type="button"
+                                      class="tw-flex tw-items-center tw-rounded-md tw-bg-opacity-20 tw-px-1.5 tw-py-[2px] tw-text-sm tw-font-semibold tw-transition-all hover:tw-bg-opacity-30 tw-bg-success tw-text-success"
+                                      style="max-height: 22px;"><span
+                                        class="tw-flex tw-flex-row tw-items-center tw-gap-0.5"><svg
+                                          stroke="currentColor"
+                                          fill="currentColor" stroke-width="0"
+                                          viewBox="0 0 20 20" aria-hidden="true"
+                                          class="tw-p-[3px]" height="22"
+                                          width="22"
+                                          xmlns="http://www.w3.org/2000/svg"><path
+                                            fill-rule="evenodd"
+                                            d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                                            clip-rule="evenodd"></path></svg><span>Boost<span
+                                            class="tw-ml-1 tw-font-normal"><span
+                                              style="position: relative; top: 0.25rem;">˜</span>20s</span>
+                                        </span></span></button></span><button
+                                    type="button"><span
+                                      class="tw-relative tw-flex tw-h-7 tw-w-7 tw-items-center tw-justify-center"><svg
+                                        stroke="currentColor"
+                                        fill="currentColor" stroke-width="0"
+                                        viewBox="0 0 16 16"
+                                        class="rotate-0 cursor-pointer transition-transform tw-flex tw-flex-col"
+                                        height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg"><path
+                                          fill-rule="evenodd"
+                                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg></span></button></span></span><div
+                                class="transition-all duration-300 ease-in-out tw-rounded-t-box tw-absolute tw-z-20 tw-flex tw-w-full tw-flex-col tw-overflow-auto tw-bg-neutral"
+                                style="top: 684px; left: 0px; height: calc(100% + 76px); transition: 0.3s ease-in-out;"><span
+                                  class="tw-flex tw-w-full tw-flex-col tw-items-end tw-px-4 tw-pt-4"><button
+                                    type="button"><span
+                                      class="tw-flex tw-h-full tw-w-full tw-items-center tw-justify-center tw-rounded-full tw-bg-base-200 tw-p-1 tw-bg-opacity-50"><svg
+                                        stroke="currentColor"
+                                        fill="currentColor" stroke-width="0"
+                                        viewBox="0 0 16 16"
+                                        class="rotate-0 cursor-pointer transition-transform tw-flex tw-flex-col tw-text-neutral-content rotate-180"
+                                        height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg"><path
+                                          fill-rule="evenodd"
+                                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg></span></button><span
+                                    id="squid-header-title"
+                                    class="tw-text-xl tw-font-semibold tw-text-base-content"
+                                    style="position: relative; top: -20px; width: 100%; text-align: center; margin-bottom: -20px; pointer-events: none;">Details</span><span
+                                    class="tw-my-3 tw-flex tw-w-full tw-flex-row tw-items-center tw-text-base tw-font-semibold">Controls</span><div
+                                    class="tw-flex tw-h-full tw-flex-1 tw-flex-col tw-gap-3 tw-text-base"><div
+                                      class="tw-flex tw-flex-col tw-gap-2"><div
+                                        id="box"
+                                        class="tw-rounded-box tw-bg-base-200 tw-flex tw-h-[45px] tw-w-full tw-flex-row tw-items-center tw-px-4"><span
+                                          class="tw-flex tw-w-full tw-flex-row tw-items-center tw-justify-between"><span
+                                            class="tw-flex tw-items-center tw-gap-1"><span
+                                              class="tw-p-[3px]"><svg
+                                                stroke="currentColor"
+                                                fill="currentColor"
+                                                stroke-width="0"
+                                                viewBox="0 0 20 20"
+                                                aria-hidden="true"
+                                                class="tw-text-base-content"
+                                                height="13" width="13"
+                                                xmlns="http://www.w3.org/2000/svg"><path
+                                                  fill-rule="evenodd"
+                                                  d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                                                  clip-rule="evenodd"></path></svg></span><span
+                                              class="tw-text-base tw-font-medium">Boost</span></span><input
+                                            class="tw-dsw-toggle-secondary tw-dsw-toggle"
+                                            type="checkbox"
+                                            checked></span></div><span
+                                        class="tw-text-xs tw-text-neutral-content">Boost
+                                        (GMP Express) is a special feature of
+                                        Axelar and Squid that reduces
+                                        transaction time across chains to 5-30
+                                        seconds. It is currently available for
+                                        swaps below a value of $20,000
+                                        USD.</span></div><div
+                                      class="tw-flex tw-flex-col tw-gap-2"><div
+                                        id="box"
+                                        class="tw-rounded-box tw-bg-base-200 tw-flex tw-h-[45px] tw-w-full tw-flex-row tw-items-center tw-px-4"><span
+                                          class="tw-flex tw-w-full tw-flex-row tw-items-center tw-justify-between"><span
+                                            class="tw-flex tw-items-center tw-gap-1"><span
+                                              class="tw-p-[3px]"><svg
+                                                stroke="currentColor"
+                                                fill="currentColor"
+                                                stroke-width="0"
+                                                viewBox="0 0 24 24"
+                                                class="tw-text-base-content"
+                                                height="14" width="14"
+                                                xmlns="http://www.w3.org/2000/svg"><path
+                                                  d="M3 19V4C3 3.44772 3.44772 3 4 3H13C13.5523 3 14 3.44772 14 4V12H16C17.1046 12 18 12.8954 18 14V18C18 18.5523 18.4477 19 19 19C19.5523 19 20 18.5523 20 18V11H18C17.4477 11 17 10.5523 17 10V6.41421L15.3431 4.75736L16.7574 3.34315L21.7071 8.29289C21.9024 8.48816 22 8.74408 22 9V18C22 19.6569 20.6569 21 19 21C17.3431 21 16 19.6569 16 18V14H14V19H15V21H2V19H3ZM5 5V11H12V5H5Z"></path></svg></span><span
+                                              class="tw-text-base tw-font-medium">Arrival
+                                              gas</span></span><input
+                                            class="tw-dsw-toggle-secondary tw-dsw-toggle"
+                                            type="checkbox"></span></div><span
+                                        class="tw-text-xs tw-text-neutral-content">
+                                        Swap some of your tokens for gas on the
+                                        destination
+                                        chain.</span></div></div><span
+                                    class="tw-bg-neutral"><div
+                                      class="tw-mt-[16px] tw-flex tw-flex-col tw-border-t-[1px] tw-border-base-200 tw-text-base tw-font-normal"><span
+                                        class="tw-my-2.5 tw-flex tw-flex-row tw-items-center tw-text-base tw-font-semibold"><span>Summary</span></span><ul
+                                        class="tw-flex tw-w-full  tw-flex-col tw-text-sm"
+                                        style="gap: 0.27rem;"><li
+                                          class="tw-flex tw-flex-row tw-items-center tw-justify-between"><span>Convert
+                                            from</span><span
+                                            class="tw-flex tw-flex-row tw-items-center tw-gap-1"><span
+                                              class="tw-flex tw-flex-row tw-gap-1"><span><span><span>0.0</span></span></span>
+                                              BNB<span
+                                                class="tw-text-sm tw-text-neutral-content">(<span><span><span>$</span><span>0</span></span></span>)</span></span></span></li><li
+                                          class="tw-flex tw-flex-row tw-items-center tw-justify-between"><span>Min
+                                            receive</span><span
+                                            class="tw-flex tw-flex-row tw-items-center tw-gap-1"><span
+                                              class="tw-flex tw-flex-row tw-gap-1"><span><span><span>0.0</span><span
+                                                    class="tw-ml-1">ETH</span></span></span>
+                                              <span
+                                                class="tw-text-sm tw-text-neutral-content">(<span><span><span>$</span><span>0</span></span></span>)</span></span></span></li><li
+                                          class="tw-flex tw-flex-row tw-items-center tw-justify-between"><span>Exchange
+                                            rate</span><span
+                                            class="tw-flex tw-flex-row tw-items-center tw-gap-1"><span>0
+                                              BNB</span><span>=</span><span><span><span><span>0</span><span
+                                                    class="tw-ml-1">ETH</span></span></span></span></span></li><li
+                                          class="tw-flex tw-flex-row tw-items-center tw-justify-between"><span>To</span><span
+                                            class="tw-flex tw-flex-row tw-items-center"></span></li></ul><div
+                                        class="tw-mt-[16px] tw-flex tw-flex-col tw-border-t-[1px] tw-border-base-200 tw-text-base tw-font-normal"><span
+                                          class="tw-my-2.5 tw-flex tw-flex-row tw-items-center tw-text-base tw-font-semibold"><span>Fee
+                                            breakdown</span></span><span
+                                          class="tw-flex tw-w-full"><ul
+                                            class="tw-flex tw-w-full  tw-flex-col tw-text-sm"
+                                            style="gap: 0.27rem;"><li
+                                              class="tw-flex tw-flex-row tw-items-center tw-justify-between"><span>Cross-chain
+                                                gas fees</span><span
+                                                class="tw-flex tw-flex-row tw-items-center tw-gap-1"><span
+                                                  class="tw-flex tw-flex-row tw-gap-1"><span><span><span>0.0</span><span
+                                                        class="tw-ml-1"></span></span></span><span
+                                                    class="tw-text-neutral-content">(<span><span><span>$</span><span>0</span></span></span>)</span></span></span></li><li
+                                              class="tw-flex tw-flex-row tw-items-center tw-justify-between"><span>Boost
+                                                fee</span><span
+                                                class="tw-flex tw-flex-row tw-items-center tw-gap-1"><span
+                                                  class="tw-flex tw-flex-row tw-items-center tw-gap-1">+
+                                                  <span><span><span>0.0</span><span
+                                                        class="tw-ml-1"></span></span></span><span
+                                                    class="tw-text-neutral-content">(<span><span><span>$</span><span>0</span></span></span>)</span></span></span></li><li
+                                              class="tw-flex tw-flex-row tw-items-center tw-justify-between"><span>Expected
+                                                gas refund</span><span
+                                                class="tw-flex tw-flex-row tw-items-center tw-gap-1"><span
+                                                  class="tw-flex tw-flex-row tw-items-center tw-gap-1">-
+                                                  <span><span><span>0.0</span><span
+                                                        class="tw-ml-1"></span></span></span><span
+                                                    class="tw-text-sm tw-text-neutral-content">(<span><span><span>$</span><span>0</span></span></span>)</span></span></span></li><li
+                                              class="tw-flex tw-flex-row tw-items-center tw-justify-between"><span>Integrator
+                                                fee</span><span
+                                                class="tw-flex tw-flex-row tw-items-center tw-gap-1"><span
+                                                  class="tw-flex tw-flex-row tw-items-center tw-gap-1">+
+                                                  <span><span><span>0.0</span><span
+                                                        class="tw-ml-1"></span></span></span><span
+                                                    class="tw-text-neutral-content">(<span><span><span>$</span><span>0</span></span></span>)</span></span></span></li><li
+                                              class="tw-flex tw-w-full tw-flex-row tw-items-center tw-justify-between"><span
+                                                class="tw-flex tw-flex-row tw-items-center tw-gap-1"><span>Total</span></span><span
+                                                class="tw-flex tw-flex-row tw-gap-1"><span><span><span>0.0</span><span
+                                                      class="tw-ml-1"></span></span></span><span
+                                                  class="tw-text-neutral-content">(<span><span><span>$</span><span>0</span></span></span>)</span></span></li></ul></span></div><div
+                                        class="tw-mt-[16px] tw-flex tw-flex-col tw-border-t-[1px] tw-border-base-200 tw-text-base tw-font-normal"><span
+                                          class="tw-my-2.5 tw-flex tw-flex-row tw-items-center tw-text-base tw-font-semibold"><span>Information</span></span><span
+                                          class="tw-block tw-text-xs tw-leading-[1.5] tw-text-neutral-content">If
+                                          market prices fluctuate significantly,
+                                          the transaction may revert and you
+                                          will receive axlUSDC on the
+                                          destination chain. <a target="_blank"
+                                            rel="noreferrer"
+                                            href="https://docs.widget.squidrouter.com/troubleshooting#you-received-axlusdc-unexpectedly"
+                                            class="tw-text-base-content hover:tw-underline">Learn
+                                            more</a></span></div></div></span></span></div></span><span
+                              class="tw-mb-2  tw-w-full tw-px-5"></span></span><span
+                            class=" tw-mb-2 tw-flex tw-w-full tw-flex-col tw-items-center tw-gap-1 tw-px-5 tw-text-sm tw-font-semibold"><button
+                              type="button" id="squid-submit-swap-btn"
+                              class="transition-all tw-rounded-btn tw-dsw-btn tw-normal-case hover:tw-brightness-95 tw-dsw-btn-md tw-base100 tw-w-full tw-min-h-[60px] tw-h-[60px] tw-normal-case tw-dsw-btn tw-dsw-btn-primary tw-bg-primary tw-text-xl tw-font-medium tw-text-base-content/30 tw-dsw-btn-disabled tw-bg-neutral tw-bg-opacity-20"
+                              disabled><span><span
+                                  class="tw-flex tw-w-full tw-flex-row tw-items-center tw-justify-center"><span>Add
+                                    destination
+                                    address</span></span></span></button><span
+                              class="tw-mb-2 tw-mt-2 tw-flex tw-flex-row tw-items-center tw-gap-1.5 tw-font-normal tw-text-neutral-content"><span>Powered
+                                by</span> <span
+                                class="tw-flex tw-flex-row tw-items-center tw-gap-1"><a
+                                  target="_blank"
+                                  href="https://www.squidrouter.com/"
+                                  rel="noreferrer"><span
+                                    class="tw-flex tw-flex-row tw-items-center"
+                                    style="height: 17px; width: auto;"><svg
+                                      height="20px" viewBox="0 0 2973 1694"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"><g
+                                        clip-path="url(#clip0_524_1024)"><path
+                                          d="M602.98 860.58C538.38 745.7 478.04 637.76 391.78 526.94C342.94 464.2 296.7 395.52 290.44 316.26C283.8 232.32 389.96 191.66 407.64 284.34C424.7 373.78 417.12 464.44 456.24 549.72C474.92 590.42 510.16 618.16 553.72 598.86C628.96 565.48 557.24 464.46 535.78 420.92C500.68 349.78 495.9 275.2 487.76 198.4C481.9 143.18 460.12 88.48 420.68 48.64C373.28 0.759998 312.5 -11.26 248.84 10.92C148.96 45.72 -42.62 239.1 211.7 546.24C262.22 607.24 326.06 655.64 385.58 707.9C485.44 795.6 567.9 894.14 608.98 1016.14C651.4 1142.1 659.98 1291.86 575.96 1394.84C470.32 1524.36 352.54 1481.72 289.32 1420.7C202.48 1336.88 232.96 1265.72 213.38 1161.04C202.76 1104.28 174.56 1051.44 138.94 1006C113.66 973.76 71.38 944.42 34.32 961.86C-1.42001 978.68 -6.96 1029.68 9.32 1065.68C25.6 1101.68 56.64 1128.5 80.06 1160.3C97.94 1184.56 134.72 1245.42 126.58 1330C119.3 1405.64 133.02 1487.16 169.88 1554.5C283.8 1762.68 559.64 1746.56 664.5 1419.66C750.1 1152.8 654.24 951.78 602.98 860.62V860.58Z"
+                                          fill="hsl(var(--nc))"></path><path
+                                          d="M1933.42 262.9C1910.94 242.7 1900.14 211.56 1900.46 181.32C1900.76 151.1 1911.22 121.7 1925.74 95.1803C1943.78 62.2203 1969.12 32.1404 2002.58 15.0603C2036.04 -2.01965 2078.38 -4.25965 2110.44 15.3403C2142.5 34.9203 2159.92 78.3803 2144.6 112.68C2129.54 146.36 2098.42 149.2 2073.78 171.02C2051.88 190.44 2057.48 198.58 2051.42 224.56C2038.36 280.46 1978.74 303.62 1933.44 262.9H1933.42Z"
+                                          fill="hsl(var(--nc))"></path><path
+                                          d="M2209.52 313.04C2165.42 293.92 2116.86 329.82 2088.36 368.56C2026.5 452.6 1993.94 551.66 1994.16 656.16C1994.44 793.12 2050.56 920.28 2098.68 1045.84C2143.76 1163.5 2142.66 1290.56 2091.2 1406.9C2065.22 1465.64 2012.3 1507.2 1988.06 1566.48C1970.52 1609.38 1979.18 1668.98 2021.82 1687.16C2066.04 1706.02 2115.02 1670.26 2142.64 1630.9C2261.38 1461.68 2188 1149 2156.12 1057.78C2008.94 636.64 2203.76 529.9 2242.54 433.92C2259.9 390.94 2252.04 331.48 2209.52 313.04Z"
+                                          fill="hsl(var(--nc))"></path><path
+                                          d="M1362.32 326.341C1290.64 14.8807 1075.5 -18.9993 978.36 11.3807C741.36 85.5207 718.58 336.201 760.5 500.721C824.7 752.701 1034.26 735.441 1106.28 690.481C1163.98 654.461 1181.68 588.621 1209.7 609.101C1248.2 637.241 1167.62 726.261 1153.86 741.041C999.2 906.901 842.78 1010.48 796.66 1326.78C783.04 1420.14 805.7 1533.8 851.16 1616.64C865.14 1642.12 909.9 1716.68 972.34 1686.26C1044.98 1650.86 1012.3 1564.74 999.4 1537.9C986.5 1511.06 916.36 1402.92 908.14 1312.74C874.08 939.321 1187.98 872.661 1299.3 725.061C1413.56 573.581 1381.46 409.621 1362.3 326.341H1362.32ZM1036.22 291.201C1031.9 298.241 1028.6 304.521 1026.16 310.521C1019.46 327.081 1019.42 341.441 1023.28 363.401C1033.64 422.101 993.68 476.581 929.46 455.901C899.62 446.281 876.22 421.361 863.72 392.601C851.22 363.841 848.68 331.581 851.2 300.321C854.32 261.481 865.58 222.261 890.04 191.941C914.5 161.601 953.64 141.561 992.28 146.541C1030.92 151.521 1065.82 185.281 1065.82 224.241C1065.82 250.641 1049.24 269.901 1036.2 291.181L1036.22 291.201Z"
+                                          fill="hsl(var(--nc))"></path><path
+                                          d="M2889.82 970.819C2778.5 823.239 2470.6 756.579 2504.66 383.139C2512.88 292.979 2577.02 184.819 2589.92 157.979C2602.8 131.139 2635.5 45.0391 2562.86 9.61908C2500.42 -20.8009 2455.66 53.7591 2441.68 79.2391C2396.2 162.079 2373.56 275.739 2387.18 369.099C2433.3 685.419 2589.74 788.979 2744.38 954.839C2758.16 969.619 2838.72 1058.64 2800.22 1086.78C2772.2 1107.26 2754.5 1041.42 2696.8 1005.4C2624.76 960.439 2415.22 943.179 2351.02 1195.16C2309.1 1359.68 2331.88 1610.36 2568.88 1684.5C2666 1714.88 2881.16 1681 2952.84 1369.54C2972 1286.26 3004.1 1122.3 2889.84 970.819H2889.82ZM2656.32 1471.62C2656.32 1510.58 2621.42 1544.34 2582.78 1549.32C2544.14 1554.3 2505 1534.26 2480.54 1503.92C2456.08 1473.6 2444.82 1434.36 2441.7 1395.54C2439.18 1364.28 2441.72 1332.02 2454.22 1303.26C2466.72 1274.5 2490.12 1249.58 2519.96 1239.96C2584.16 1219.28 2624.12 1273.76 2613.78 1332.46C2609.9 1354.4 2609.94 1368.78 2616.66 1385.34C2619.1 1391.34 2622.4 1397.62 2626.72 1404.66C2639.76 1425.94 2656.36 1445.2 2656.34 1471.6L2656.32 1471.62Z"
+                                          fill="hsl(var(--nc))"></path><path
+                                          d="M1757.14 534.039C1751.68 498.179 1748.86 452.799 1749.2 416.119C1749.78 353.719 1723.42 306.299 1673.72 304.959C1603.7 303.099 1590.52 361.979 1588.84 386.679C1585.3 438.879 1599.22 481.499 1621.74 528.719C1662.48 614.179 1745.28 730.179 1780.12 818.919C1823.2 928.599 1831.54 1034.88 1810.98 1148.84C1783.04 1303.74 1688.96 1499.98 1503.18 1494.38C1474.84 1493.52 1443.78 1482.32 1421.86 1465.02C1385.36 1436.2 1357.72 1385.16 1348.92 1339.34C1329.96 1240.58 1375.44 1142.6 1393.76 1047.42C1406.48 981.379 1387.1 870.339 1295.8 876.739C1236.38 880.899 1203.52 948.119 1194.3 1006.96C1177.54 1114 1179.84 1222.7 1193.46 1330.08C1206.7 1434.56 1252 1538.84 1321.5 1612.84C1402.78 1699.38 1542.9 1714.88 1647 1658.24C1751.2 1601.56 1833.86 1480.1 1871.88 1337.24C1905.88 1209.52 1903.32 1060.58 1866.34 932.919C1847.6 868.179 1828.22 803.639 1809.98 738.759C1789.84 667.179 1768.34 607.759 1757.12 534.039H1757.14Z"
+                                          fill="hsl(var(--nc))"></path></g><defs><clippath
+                                          id="clip0_524_1024"><rect width="2973"
+                                            height="1694"
+                                            fill="white"></rect></clippath></defs></svg></span></a><span>+</span><a
+                                  target="_blank"
+                                  href="https://axelar.network/?utm_source=dynamic&amp;utm_medium=referral&amp;utm_campaign=squidrouter-widget"
+                                  rel="noreferrer"><span
+                                    class="tw-flex tw-flex-row tw-items-center"
+                                    style="height: 17px; width: auto;"><svg
+                                      version="1.1" id="b"
+                                      xmlns="http://www.w3.org/2000/svg" x="0px"
+                                      y="0px" viewBox="0 0 637 150"
+                                      xml:space="preserve" height="12px"><g
+                                        id="c"><path
+                                          d="M202.4,63.9l43-42.7L229.1,5l-34.8,34.6L159.5,5l-16.3,16.2l43,42.7c2.3,2.2,5.2,3.4,8.2,3.4
+      C197.2,67.3,200.2,66.2,202.4,63.9L202.4,63.9z M264.6,109.6L229.8,75l34.8-34.6l-16.3-16.2l-43,42.7c-4.5,4.5-4.5,11.7,0,16.2
+      l43,42.7L264.6,109.6L264.6,109.6L264.6,109.6z M194.2,110.4L229,145l16.3-16.2l-43-42.7c-4.5-4.5-11.8-4.5-16.3,0l-43,42.7
+      l16.3,16.2L194.2,110.4L194.2,110.4L194.2,110.4z M183.1,83.1c2.2-2.2,3.4-5.1,3.4-8.1s-1.2-6-3.4-8.1l-43-42.7l-16.3,16.2
+      L158.7,75l-34.8,34.6l16.3,16.2L183.1,83.1L183.1,83.1L183.1,83.1z M123.3,139.4H87.1L84.5,123H61l-2.9,16.3H22L53.1,10.6h42.8
+      L123.3,139.4L123.3,139.4z M80.4,95.4l-2.3-15c-0.1-0.1-0.2-0.8-0.3-2.3c-0.1-1.2-0.7-6.1-1.8-14.5c-0.1-0.9-0.3-2.2-0.4-3.9
+      c-0.2-1.6-0.4-3.7-0.7-6.2l-1.1-12.2c-0.1,1.2-0.3,2.5-0.5,3.9s-0.4,3-0.6,4.8c-0.4,3.4-0.7,5.8-0.8,7.2c-0.2,1.3-0.3,2.1-0.3,2.4
+      l-2.4,15.6l-3.5,20.2L80.4,95.4L80.4,95.4z M339.3,139.4v-30.9h-30V88.8h26.9V59.7h-26.9V40.9h30V10.6h-65v128.8L339.3,139.4
+      L339.3,139.4z M408,108.4h-26.2V10.6h-35v128.8H408V108.4L408,108.4L408,108.4z M515.4,139.4h-36.1l-2.6-16.3h-23.6l-2.9,16.3
+      h-36.1l31.1-128.8H488L515.4,139.4L515.4,139.4L515.4,139.4z M472.6,95.4l-2.3-15c-0.1-0.1-0.2-0.8-0.3-2.3
+      c-0.1-1.2-0.7-6.1-1.8-14.5c-0.1-0.9-0.2-2.2-0.4-3.9c-0.2-1.6-0.4-3.7-0.7-6.2L466,41.4c-0.1,1.2-0.3,2.5-0.5,3.9s-0.4,3-0.6,4.8
+      c-0.4,3.4-0.7,5.8-0.8,7.2c-0.2,1.3-0.3,2.1-0.3,2.4l-2.4,15.6l-3.5,20.2L472.6,95.4L472.6,95.4z M615,139.4h-37.8l-17.3-45.9
+      c-0.2-0.8-0.5-1.8-0.9-3.1c-0.4-1.3-0.9-2.8-1.6-4.6l0.3,8.5v45h-34.8V10.6h35.8c15.8,0,27.6,3.1,35.4,9.3
+      C604,27.8,609,39,609,53.6c0,15.6-6.7,26.3-20,32.3L615,139.4L615,139.4L615,139.4z M574.3,54c0-9.6-5.1-14.4-15.2-14.4h-1.3v30.7
+      h2.3c4,0,7.4-1.5,10.1-4.6C573,62.6,574.3,58.7,574.3,54z"
+                                          fill="hsl(var(--nc))"></path></g></svg></span></a></span></span></span></div></div></div></div></div></div></div></div></div><footer
+          class="w-full flex justify-center mt-12 flex-col"><div
+            class="container mx-auto flex flex-col sm:flex-row px-6 py-12 sm:py-24 gap-24"><div
+              class="flex flex-col gap-2"><p
+                class="uppercase font-bold font-manrope">Others</p><hr
+                class="shrink-0 bg-divider border-none w-full h-divider"
+                role="separator"><a
+                class="relative inline-flex tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled transition-opacity w-full text-xl sm:text-2xl gap-3 items-center text-[#a1a1aa]"
+                tabindex="0" role="link"
+                href="https://app.uniswap.org/#/swap?inputCurrency=ETH&amp;outputCurrency=0x5fE72ed557d8a02FFf49B3B826792c765d5cE162"
+                rel="noopener noreferrer" target="_blank"><svg
+                  stroke="currentColor" fill="currentColor" stroke-width="0"
+                  viewBox="0 0 24 24" class="w-5 h-5" height="1em" width="1em"
+                  xmlns="http://www.w3.org/2000/svg"><path
+                    d="M21.5 9C21.5 11.7039 19.849 14.0223 17.5 15.0018L17.5 15C17.5 10.3056 13.6944 6.5 9.00001 6.5L8.99817 6.5C9.97773 4.15105 12.2961 2.5 15 2.5C18.5899 2.5 21.5 5.41015 21.5 9ZM7 3C4.79086 3 3 4.79086 3 7V8.5H5V7C5 5.89543 5.89543 5 7 5H8.5V3H7ZM19 15.5V17C19 18.1046 18.1046 19 17 19H15.5V21H17C19.2091 21 21 19.2091 21 17V15.5H19ZM9 21.5C12.5899 21.5 15.5 18.5899 15.5 15C15.5 11.4101 12.5899 8.5 9 8.5C5.41015 8.5 2.5 11.4101 2.5 15C2.5 18.5899 5.41015 21.5 9 21.5ZM9 12.5L11.5 15L9 17.5L6.5 15L9 12.5Z"></path></svg>Uniswap</a><a
+                class="relative inline-flex tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled transition-opacity w-full text-xl sm:text-2xl gap-3 items-center text-[#a1a1aa]"
+                tabindex="0" role="link"
+                href="https://curve.fi/#/ethereum/pools/factory-stable-ng-118/deposit"
+                rel="noopener noreferrer" target="_blank"><svg
+                  stroke="currentColor" fill="currentColor" stroke-width="0"
+                  viewBox="0 0 640 512" class="w-5 h-5" height="1em" width="1em"
+                  xmlns="http://www.w3.org/2000/svg"><path
+                    d="M296 136V88h48v48H296zM288 32c-26.5 0-48 21.5-48 48v4H121.6C111.2 62.7 89.3 48 64 48C28.7 48 0 76.7 0 112s28.7 64 64 64c25.3 0 47.2-14.7 57.6-36h66.9c-58.9 39.6-98.9 105-104 180H80c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48h-3.3c5.9-67 48.5-123.4 107.5-149.1c8.6 12.7 23.2 21.1 39.8 21.1h64c16.6 0 31.1-8.4 39.8-21.1c59 25.7 101.6 82.1 107.5 149.1H496c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48h-4.5c-5-75-45.1-140.4-104-180h66.9c10.4 21.3 32.3 36 57.6 36c35.3 0 64-28.7 64-64s-28.7-64-64-64c-25.3 0-47.2 14.7-57.6 36H400V80c0-26.5-21.5-48-48-48H288zM88 376h48v48H88V376zm416 48V376h48v48H504z"></path></svg>Curve</a></div><div
+              class="flex flex-col gap-2"><p
+                class="uppercase font-bold font-manrope">Socials</p><hr
+                class="shrink-0 bg-divider border-none w-full h-divider"
+                role="separator"><a
+                class="relative inline-flex tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled transition-opacity w-full text-xl sm:text-2xl gap-3 items-center text-[#a1a1aa]"
+                tabindex="0" role="link" href="https://t.me/shezmueth"
+                rel="noopener noreferrer" target="_blank"><svg
+                  stroke="currentColor" fill="currentColor" stroke-width="0"
+                  role="img" viewBox="0 0 24 24" class="w-5 h-5" height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"><title></title><path
+                    d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path></svg>
+                Telegram</a><a
+                class="relative inline-flex tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled transition-opacity w-full text-xl sm:text-2xl gap-3 items-center text-[#a1a1aa]"
+                tabindex="0" role="link" href="https://twitter.com/ShezmuTech"
+                rel="noopener noreferrer" target="_blank"><svg
+                  stroke="currentColor" fill="currentColor" stroke-width="0"
+                  role="img" viewBox="0 0 24 24" class="w-5 h-5" height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"><title></title><path
+                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg>Twitter</a><a
+                class="relative inline-flex tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled transition-opacity w-full text-xl sm:text-2xl gap-3 items-center text-[#a1a1aa]"
+                tabindex="0" role="link"
+                href="https://shezmu.gitbook.io/shezmu/introduction/welcome-to-shezmu"
+                rel="noopener noreferrer" target="_blank"><svg
+                  stroke="currentColor" fill="currentColor" stroke-width="0"
+                  role="img" viewBox="0 0 24 24" class="w-5 h-5" height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"><title></title><path
+                    d="M10.802 17.77a.703.703 0 11-.002 1.406.703.703 0 01.002-1.406m11.024-4.347a.703.703 0 11.001-1.406.703.703 0 01-.001 1.406m0-2.876a2.176 2.176 0 00-2.174 2.174c0 .233.039.465.115.691l-7.181 3.823a2.165 2.165 0 00-1.784-.937c-.829 0-1.584.475-1.95 1.216l-6.451-3.402c-.682-.358-1.192-1.48-1.138-2.502.028-.533.212-.947.493-1.107.178-.1.392-.092.62.027l.042.023c1.71.9 7.304 3.847 7.54 3.956.363.169.565.237 1.185-.057l11.564-6.014c.17-.064.368-.227.368-.474 0-.342-.354-.477-.355-.477-.658-.315-1.669-.788-2.655-1.25-2.108-.987-4.497-2.105-5.546-2.655-.906-.474-1.635-.074-1.765.006l-.252.125C7.78 6.048 1.46 9.178 1.1 9.397.457 9.789.058 10.57.006 11.539c-.08 1.537.703 3.14 1.824 3.727l6.822 3.518a2.175 2.175 0 002.15 1.862 2.177 2.177 0 002.173-2.14l7.514-4.073c.38.298.853.461 1.337.461A2.176 2.176 0 0024 12.72a2.176 2.176 0 00-2.174-2.174"></path></svg>Gitbook</a></div></div><div
+            class="container mx-auto flex flex-wrap items-center justify-between px-6 border-t-1 border-[#ecc63f] py-4 sm:py-8 gap-2"><div
+              class="flex items-start sm:items-center justify-center text-lg flex-wrap gap-2"><img
+                alt="Shezmu logo" loading="lazy" width="110" height="24"
+                decoding="async" data-nimg="1" style="color:transparent"
+                srcset="logo_nav-1.png 1x, logo_nav-2.png 2x"
+                src="logo_nav-2.png"><div class="flex gap-4"><a
+                  class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled text-[#a1a1aa] hover:text-[#fedd6a] transition text-sm sm:text-base min-w-max"
+                  tabindex="0" role="link"
+                  href="https://etherscan.io/address/0x5fe72ed557d8a02fff49b3b826792c765d5ce162"
+                  rel="noopener noreferrer" target="_blank">Shezmu</a><a
+                  class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled text-[#a1a1aa] hover:text-[#fedd6a] transition text-sm sm:text-base min-w-max"
+                  tabindex="0" role="link"
+                  href="https://etherscan.io/address/0x1d1B79A8C50Df0e11019f822cd3d7E5d485eBdAa"
+                  rel="noopener noreferrer" target="_blank">Guardian</a><a
+                  class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled text-[#a1a1aa] hover:text-[#fedd6a] transition text-sm sm:text-base min-w-max"
+                  tabindex="0" role="link"
+                  href="https://etherscan.io/token/0xd60eea80c83779a8a5bfcdac1f3323548e6bb62d"
+                  rel="noopener noreferrer"
+                  target="_blank">ShezUSD</a></div></div><p
+              class="text-sm sm:text-base text-[#ecc63f] text-center sm:text-right w-full sm:w-fit">©
+              <!-- -->2024<!-- --> Shezmu. All rights
+              reserved.</p></div></footer></main><div
+        class="Toastify"></div></div><next-route-announcer
+      style="position: absolute;"
+      data-scrapbook-shadowdom="<div aria-live=&quot;assertive&quot; id=&quot;__next-route-announcer__&quot; role=&quot;alert&quot; style=&quot;position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;&quot;></div>"></next-route-announcer><span
+      data-focus-scope-start="true" hidden></span><span
+      data-focus-scope-end="true" hidden></span><iframe id="verify-api"
+      src="index_1.html" style="display: none;"></iframe><iframe id="verify-api"
+      src="index_2.html" style="display: none;"></iframe><w3m-modal
+      data-scrapbook-adoptedstylesheets="0,1"
+      data-scrapbook-shadowdom="<!----><w3m-explorer-context data-scrapbook-shadowdom=&quot;<!---->&quot;></w3m-explorer-context><w3m-theme-context data-scrapbook-shadowdom=&quot;<!---->&quot;></w3m-theme-context><!--?lit$612699467$--><div id=&quot;w3m-modal&quot; role=&quot;alertdialog&quot; aria-modal=&quot;true&quot; class=&quot; w3m-overlay &quot;><div class=&quot;w3m-container&quot; tabindex=&quot;0&quot;><!--?lit$612699467$--></div></div>"></w3m-modal><w3m-modal
+      data-scrapbook-adoptedstylesheets="0,1"
+      data-scrapbook-shadowdom="<!----><w3m-explorer-context data-scrapbook-shadowdom=&quot;<!---->&quot;></w3m-explorer-context><w3m-theme-context data-scrapbook-shadowdom=&quot;<!---->&quot;></w3m-theme-context><!--?lit$612699467$--><div id=&quot;w3m-modal&quot; role=&quot;alertdialog&quot; aria-modal=&quot;true&quot; class=&quot; w3m-overlay &quot;><div class=&quot;w3m-container&quot; tabindex=&quot;0&quot;><!--?lit$612699467$--></div></div>"></w3m-modal><iframe
+      id="verify-api" src="index_3.html" style="display: none;"></iframe><iframe
+      id="verify-api" src="index_4.html"
+      style="display: none;"></iframe> </body></html>
