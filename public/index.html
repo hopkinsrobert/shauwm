@@ -1,0 +1,1485 @@
+<!DOCTYPE html><html lang="en" class="dark"
+  style="--w3m-color-fg-1: rgb(228,231,231); --w3m-color-fg-2: rgb(148,158,158); --w3m-color-fg-3: rgb(110,119,119); --w3m-color-bg-1: rgb(20,20,20); --w3m-color-bg-2: rgb(39,42,42); --w3m-color-bg-3: rgb(59,64,64); --w3m-color-overlay: rgba(255,255,255,0.1); --w3m-accent-color: #3396FF; --w3m-accent-fill-color: #FFFFFF; --w3m-z-index: 89; --w3m-background-color: #3396FF; --w3m-background-border-radius: 8px; --w3m-container-border-radius: 30px; --w3m-wallet-icon-border-radius: 15px; --w3m-wallet-icon-large-border-radius: 30px; --w3m-wallet-icon-small-border-radius: 7px; --w3m-input-border-radius: 28px; --w3m-button-border-radius: 10px; --w3m-notification-border-radius: 36px; --w3m-secondary-button-border-radius: 28px; --w3m-icon-button-border-radius: 50%; --w3m-button-hover-highlight-border-radius: 10px; --w3m-text-big-bold-size: 20px; --w3m-text-big-bold-weight: 600; --w3m-text-big-bold-line-height: 24px; --w3m-text-big-bold-letter-spacing: -0.03em; --w3m-text-big-bold-text-transform: none; --w3m-text-xsmall-bold-size: 10px; --w3m-text-xsmall-bold-weight: 700; --w3m-text-xsmall-bold-line-height: 12px; --w3m-text-xsmall-bold-letter-spacing: 0.02em; --w3m-text-xsmall-bold-text-transform: uppercase; --w3m-text-xsmall-regular-size: 12px; --w3m-text-xsmall-regular-weight: 600; --w3m-text-xsmall-regular-line-height: 14px; --w3m-text-xsmall-regular-letter-spacing: -0.03em; --w3m-text-xsmall-regular-text-transform: none; --w3m-text-small-thin-size: 14px; --w3m-text-small-thin-weight: 500; --w3m-text-small-thin-line-height: 16px; --w3m-text-small-thin-letter-spacing: -0.03em; --w3m-text-small-thin-text-transform: none; --w3m-text-small-regular-size: 14px; --w3m-text-small-regular-weight: 600; --w3m-text-small-regular-line-height: 16px; --w3m-text-small-regular-letter-spacing: -0.03em; --w3m-text-small-regular-text-transform: none; --w3m-text-medium-regular-size: 16px; --w3m-text-medium-regular-weight: 600; --w3m-text-medium-regular-line-height: 20px; --w3m-text-medium-regular-letter-spacing: -0.03em; --w3m-text-medium-regular-text-transform: none; --w3m-font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif; --w3m-success-color: rgb(38,181,98); --w3m-error-color: rgb(242, 90, 103); --w3m-background-image-url: none;"
+  data-scrapbook-source="https://www.shezmu.io/oasis"
+  data-scrapbook-create="20240803225030721"
+  data-scrapbook-title="Shezmu | Leveraging Yield"
+  data-scrapbook-adoptedstylesheet-0="*, ::after, ::before { margin: 0px; padding: 0px; box-sizing: border-box; font-style: normal; text-rendering: optimizespeed; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; backface-visibility: hidden; }
+
+button { cursor: pointer; display: flex; justify-content: center; align-items: center; position: relative; border: none; background-color: transparent; transition: 0.2s; }
+
+@media (hover: hover) and (pointer: fine) {
+  button:active { transition: 0.1s; transform: scale(0.93); }
+}
+
+button::after { content: &quot;&quot;; position: absolute; inset: 0px; transition: background-color, 0.2s; }
+
+button:disabled { cursor: not-allowed; }
+
+button svg, button w3m-text { position: relative; z-index: 1; }
+
+input { border: none; outline: 0px; appearance: none; }
+
+img { display: block; }
+
+::selection { color: var(--w3m-accent-fill-color); background: var(--w3m-accent-color); }"
+  data-scrapbook-adoptedstylesheet-1=":host { all: initial; }
+
+.w3m-overlay { inset: 0px; position: fixed; z-index: var(--w3m-z-index); overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, 0.3); opacity: 0; pointer-events: none; }
+
+@media (max-height: 720px) and (orientation: landscape) {
+  .w3m-overlay { overflow: scroll; align-items: flex-start; padding: 20px 0px; }
+}
+
+.w3m-active { pointer-events: auto; }
+
+.w3m-container { position: relative; max-width: 360px; width: 100%; outline: 0px; border-radius: var(--w3m-background-border-radius) var(--w3m-background-border-radius) var(--w3m-container-border-radius) var(--w3m-container-border-radius); border: 1px solid var(--w3m-color-overlay); overflow: hidden; }
+
+.w3m-card { width: 100%; position: relative; border-radius: var(--w3m-container-border-radius); overflow: hidden; box-shadow: 0 6px 14px -6px rgba(10,16,31,.12),0 10px 32px -4px rgba(10,16,31,.1),0 0 0 1px var(--w3m-color-overlay); background-color: var(--w3m-color-bg-1); color: var(--w3m-color-fg-1); }
+
+@media (max-width: 600px) {
+  .w3m-container { max-width: 440px; border-radius: var(--w3m-background-border-radius) var(--w3m-background-border-radius) 0 0; }
+  .w3m-card { border-radius: var(--w3m-container-border-radius) var(--w3m-container-border-radius) 0 0; }
+  .w3m-overlay { align-items: flex-end; }
+}
+
+@media (max-width: 440px) {
+  .w3m-container { border: 0px; }
+}"> <head><script src="./228.js"></script><meta
+      charset="UTF-8"><meta name="viewport"
+      content="width=device-width, initial-scale=1"><link rel="stylesheet"
+      href="a07bf4daed179dee.css" data-precedence="next"><link rel="stylesheet"
+      href="0885fe86a914a8a9.css" data-precedence="next"><link rel="icon"
+      href="favicon.ico"><title>Shezmu | Leveraging Yield</title><meta
+      name="description"
+      content="Shezmu is the first multi-asset CDP being built atop LayerZero. Deposit and borrow against yield-bearing assets and NFTs at Shezmu."><meta
+      name="theme-color" media="(prefers-color-scheme: light)"
+      content="white"><meta name="theme-color"
+      media="(prefers-color-scheme: dark)" content="black"><meta
+      property="og:title" content="Shezmu | Leveraging Yield"><meta
+      property="og:description"
+      content="Shezmu is the first multi-asset CDP being built atop LayerZero. Deposit and borrow against yield-bearing assets and NFTs at Shezmu."><meta
+      property="og:image:alt"
+      content="Shezmu is the first multi-asset CDP being built atop LayerZero. Deposit and borrow against yield-bearing assets and NFTs at Shezmu."><meta
+      property="og:image:type" content="image/png"><meta property="og:image"
+      content="https://shezmu-app-liesmch8p-core-team1.vercel.app/opengraph-image?0759620a0fe2af41"><meta
+      property="og:image:width" content="1200"><meta property="og:image:height"
+      content="630"><meta name="twitter:card"
+      content="summary_large_image"><meta name="twitter:title"
+      content="Shezmu | Leveraging Yield"><meta name="twitter:description"
+      content="Shezmu is the first multi-asset CDP being built atop LayerZero. Deposit and borrow against yield-bearing assets and NFTs at Shezmu."><meta
+      name="twitter:image" content="https://shezmu.io/opengraph-image"><meta
+      name="twitter:image:width" content="1200"><meta
+      name="twitter:image:height" content="630"><meta name="twitter:image:alt"
+      content="Shezmu"><link rel="icon" href="favicon.ico" type="image/x-icon"
+      sizes="16x16"><meta name="next-size-adjust"><style
+      data-emotion="css 1mtmiup animation-plwpox"
+      data-s>.css-1mtmiup{all:unset;cursor:pointer;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;border-radius:8px;padding:14px 14px;font-size:16px;font-weight:500;box-sizing:border-box;-webkit-tap-highlight-color:transparent;line-height:normal;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:border 200ms ease;transition:border 200ms ease;gap:0;background:hsl(256, 6.0%, 93.2%);color:hsl(230deg 11.63% 8.43%);-webkit-animation:animation-plwpox 300ms ease;animation:animation-plwpox 300ms ease;}.css-1mtmiup:active{-webkit-transform:translateY(1px);-moz-transform:translateY(1px);-ms-transform:translateY(1px);transform:translateY(1px);}.css-1mtmiup[disabled]{cursor:not-allowed;}@-webkit-keyframes animation-plwpox{from{opacity:0;}to{opacity:1;}}@keyframes animation-plwpox{from{opacity:0;}to{opacity:1;}}</style><style
+      data-emotion="css w3jvbs animation-uey69n"
+      data-s>.css-w3jvbs{-webkit-animation:animation-uey69n 2s linear infinite;animation:animation-uey69n 2s linear infinite;width:1em;height:1em;}@-webkit-keyframes animation-uey69n{100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}@keyframes animation-uey69n{100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}</style><style
+      data-emotion="css 1s0kaq5 animation-dfl6wh"
+      data-s>.css-1s0kaq5{stroke-linecap:round;-webkit-animation:animation-dfl6wh 1.5s ease-in-out infinite;animation:animation-dfl6wh 1.5s ease-in-out infinite;}@-webkit-keyframes animation-dfl6wh{0%{stroke-dasharray:1,150;stroke-dashoffset:0;}50%{stroke-dasharray:90,150;stroke-dashoffset:-35;}100%{stroke-dasharray:90,150;stroke-dashoffset:-124;}}@keyframes animation-dfl6wh{0%{stroke-dasharray:1,150;stroke-dashoffset:0;}50%{stroke-dasharray:90,150;stroke-dashoffset:-35;}100%{stroke-dasharray:90,150;stroke-dashoffset:-124;}}</style><style
+      type="text/css">.lf-progress {
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  width: 100%;
+  /* margin: 0 10px; */
+  height: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.lf-progress:focus {
+  outline: none;
+  border: none;
+}
+.lf-progress::-moz-range-track {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+.lf-progress::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-moz-range-thumb {
+  -moz-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-ms-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.lf-progress::-ms-fill-lower {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-fill-upper {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-thumb {
+  border: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress:focus::-ms-fill-lower {
+  background: #ccc;
+}
+.lf-progress:focus::-ms-fill-upper {
+  background: #ccc;
+}
+.lf-player-container :focus {
+  outline: 0;
+}
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-player-btn-container {
+  display: flex;
+  align-items: center;
+}
+.lf-player-btn {
+  cursor: pointer;
+  fill: #999;
+  width: 14px;
+}
+
+.lf-player-btn.active {
+  fill: #555;
+}
+
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 1;
+
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+  padding: 10px;
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-arrow {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  bottom: -9px;
+  border-style: solid;
+  border-width: 10px 10px 0px 10px;
+}
+
+.lf-left-align,
+.lf-left-align .lfarrow {
+  left: 0;
+  right: unset;
+}
+
+.lf-right-align,
+.lf-right-align .lf-arrow {
+  right: 0;
+  left: unset;
+}
+
+.lf-text-input {
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  padding: 3px;
+  width: 60px;
+  margin: 0;
+}
+
+.lf-color-picker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 90px;
+}
+
+.lf-color-selectors {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lf-color-component {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.lf-color-component strong {
+  width: 40px;
+}
+
+.lf-color-component input[type='range'] {
+  margin: 0 0 0 10px;
+}
+
+.lf-color-component input[type='number'] {
+  width: 50px;
+  margin: 0 0 0 10px;
+}
+
+.lf-color-preview {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5px;
+}
+
+.lf-preview {
+  height: 60px;
+  width: 60px;
+}
+
+.lf-popover-snapshot {
+  width: 150px;
+}
+.lf-popover-snapshot h5 {
+  margin: 5px 0 10px 0;
+  font-size: 0.75rem;
+}
+.lf-popover-snapshot a {
+  display: block;
+  text-decoration: none;
+}
+.lf-popover-snapshot a:before {
+  content: '⥼';
+  margin-right: 5px;
+}
+.lf-popover-snapshot .lf-note {
+  display: block;
+  margin-top: 10px;
+  color: #999;
+}
+.lf-player-controls > div {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.lf-player-controls > div:first-child {
+  margin-left: 0px;
+}
+.lf-player-controls > div:last-child {
+  margin-right: 0px;
+}
+</style> </head><body
+    class="__variable_dd4b18 __variable_da1155 __variable_b1da2a"><div
+      data-overlay-container="true"><main
+        class="dark text-foreground min-h-[100dvh] items-center bg-[#050508]"><nav
+          class="flex z-40 w-full h-auto items-center justify-center data-[menu-open=true]:border-none top-0 inset-x-0 backdrop-blur-lg data-[menu-open=true]:backdrop-blur-xl backdrop-saturate-150 bg-black/50 fixed"
+          style="--navbar-height: 4rem; transform: translateY(0%) translateZ(0px);"><header
+            class="z-40 flex px-6 gap-4 w-full flex-row relative flex-nowrap items-center justify-between h-[var(--navbar-height)] max-w-full"><ul
+              class="flex gap-4 h-full flex-row flex-nowrap items-center data-[justify=start]:justify-start data-[justify=start]:flex-grow data-[justify=start]:basis-0 data-[justify=center]:justify-center data-[justify=end]:justify-end data-[justify=end]:flex-grow data-[justify=end]:basis-0"
+              data-justify="start"><button
+                class="group flex items-center justify-center w-6 h-full rounded-small tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 sm:hidden"
+                type="button" aria-label="Open menu" aria-pressed="false"><span
+                  class="sr-only">open navigation menu</span><span
+                  class="w-full h-full pointer-events-none flex flex-col items-center justify-center text-inherit group-data-[pressed=true]:opacity-70 transition-opacity before:content-[''] before:block before:h-px before:w-6 before:bg-current before:transition-transform before:duration-150 before:-translate-y-1 before:rotate-0 group-data-[open=true]:before:translate-y-px group-data-[open=true]:before:rotate-45 after:content-[''] after:block after:h-px after:w-6 after:bg-current after:transition-transform after:duration-150 after:translate-y-1 after:rotate-0 group-data-[open=true]:after:translate-y-0 group-data-[open=true]:after:-rotate-45"></span></button><div
+                class="flex basis-0 flex-row flex-grow flex-nowrap justify-start bg-transparent items-center no-underline text-medium whitespace-nowrap box-border"><a
+                  class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-foreground no-underline hover:opacity-80 active:opacity-disabled transition-opacity"
+                  tabindex="0" role="link" href="https://www.shezmu.io/"><img
+                    alt="Shezmu Logo" loading="lazy" width="142" height="24"
+                    decoding="async" data-nimg="1" style="color:transparent"
+                    srcset="logo_nav.png 1x, logo_nav-1.png 2x"
+                    src="logo_nav-1.png"></a></div></ul><ul
+              class="h-full flex-row flex-nowrap items-center data-[justify=start]:justify-start data-[justify=start]:flex-grow data-[justify=start]:basis-0 data-[justify=center]:justify-center data-[justify=end]:justify-end data-[justify=end]:flex-grow data-[justify=end]:basis-0 hidden sm:flex gap-12"
+              data-justify="center"><div
+                class="flex flex-col items-center justify-center"><a
+                  class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-foreground no-underline hover:opacity-80 active:opacity-disabled transition-opacity font-montserrat font-extrabold uppercase"
+                  tabindex="0" role="link" href
+                  style="user-select: none;">Borrow</a><div
+                  class="absolute mt-8 h-2 w-2 rounded-full bg-syellow-light"></div></div><div
+                class="flex flex-col items-center justify-center"><a
+                  class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-foreground no-underline hover:opacity-80 active:opacity-disabled transition-opacity font-montserrat font-extrabold uppercase"
+                  tabindex="0" role="link" href="./mint.html"
+                  style="user-select: none;">Mint</a><div
+                  class="absolute mt-8 h-2 w-2 rounded-full"></div></div><div
+                class="flex flex-col items-center justify-center"><a
+                  class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-foreground no-underline hover:opacity-80 active:opacity-disabled transition-opacity font-montserrat font-extrabold uppercase"
+                  tabindex="0" role="link" href="./swap.html"
+                  style="user-select: none;">Swap</a><div
+                  class="absolute mt-8 h-2 w-2 rounded-full"></div></div></ul><ul
+              class="flex gap-4 h-full flex-row flex-nowrap items-center data-[justify=start]:justify-start data-[justify=start]:flex-grow data-[justify=start]:basis-0 data-[justify=center]:justify-center data-[justify=end]:justify-end data-[justify=end]:flex-grow data-[justify=end]:basis-0"
+              data-justify="end"><li
+                class="text-medium whitespace-nowrap box-border list-none data-[active=true]:font-semibold"><div
+                  class="gap-4 hidden sm:flex"><a target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://twitter.com/ShezmuTech"><svg
+                      stroke="currentColor" fill="currentColor" stroke-width="0"
+                      role="img" viewBox="0 0 24 24" class="w-5 h-5"
+                      height="1em" width="1em"
+                      xmlns="http://www.w3.org/2000/svg"><title></title><path
+                        d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg></a><a
+                    target="_blank" rel="noopener noreferrer"
+                    href="https://t.me/shezmueth"><svg stroke="currentColor"
+                      fill="currentColor" stroke-width="0" role="img"
+                      viewBox="0 0 24 24" class="w-5 h-5" height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"><title></title><path
+                        d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path></svg></a><a
+                    target="_blank" rel="noopener noreferrer"
+                    href="https://shezmu.gitbook.io/shezmu/introduction/welcome-to-shezmu"><svg
+                      stroke="currentColor" fill="currentColor" stroke-width="0"
+                      role="img" viewBox="0 0 24 24" class="w-5 h-5"
+                      height="1em" width="1em"
+                      xmlns="http://www.w3.org/2000/svg"><title></title><path
+                        d="M10.802 17.77a.703.703 0 11-.002 1.406.703.703 0 01.002-1.406m11.024-4.347a.703.703 0 11.001-1.406.703.703 0 01-.001 1.406m0-2.876a2.176 2.176 0 00-2.174 2.174c0 .233.039.465.115.691l-7.181 3.823a2.165 2.165 0 00-1.784-.937c-.829 0-1.584.475-1.95 1.216l-6.451-3.402c-.682-.358-1.192-1.48-1.138-2.502.028-.533.212-.947.493-1.107.178-.1.392-.092.62.027l.042.023c1.71.9 7.304 3.847 7.54 3.956.363.169.565.237 1.185-.057l11.564-6.014c.17-.064.368-.227.368-.474 0-.342-.354-.477-.355-.477-.658-.315-1.669-.788-2.655-1.25-2.108-.987-4.497-2.105-5.546-2.655-.906-.474-1.635-.074-1.765.006l-.252.125C7.78 6.048 1.46 9.178 1.1 9.397.457 9.789.058 10.57.006 11.539c-.08 1.537.703 3.14 1.824 3.727l6.822 3.518a2.175 2.175 0 002.15 1.862 2.177 2.177 0 002.173-2.14l7.514-4.073c.38.298.853.461 1.337.461A2.176 2.176 0 0024 12.72a2.176 2.176 0 00-2.174-2.174"></path></svg></a></div></li><li
+                class="text-medium whitespace-nowrap box-border list-none data-[active=true]:font-semibold"><button
+                  class="!p-2 font-bold font-manrope interact-button rounded-2xl !bg-transparent !border-2 !border-solid !rounded-full !text-white !border-syellow-base hover:text-black/90 text-xs sm:text-base tw-connect-wallet css-1mtmiup"
+                  data-theme="[object Object]" data-is-loading="false"
+                  type="button" aria-label="Connect Wallet"
+                  data-test="connect-wallet-button"
+                  style="min-width: 140px;">Connect
+                  Wallet</button></li></ul></header></nav><div class><div
+            class="flex flex-1 min-h-[90dvh] h-full w-full justify-center px-4"><img
+              alt="Background" loading="lazy" width="1920" height="1080"
+              decoding="async" data-nimg="1"
+              class="absolute object-fill z-0 blur-md h-[1080px] w-[100vw]"
+              srcset="oasis_bg-1.png 1x, oasis_bg.png 2x" src="oasis_bg.png"
+              style="color: transparent; mask-image: linear-gradient(rgb(0, 0, 0) 50%, transparent); user-select: none; pointer-events: none;"><div
+              class="flex flex-col gap-8 w-full items-center z-10 mt-12"><div
+                class="w-full sm:h-72 max-w-5xl flex flex-col gap-4 sm:gap-8 z-10 sm:mt-12 py-4 items-center"><div
+                  class="flex flex-col gap-8 items-center font-montserrat z-10 p-2 w-full"><h1
+                    class="font-extrabold text-5xl sm:text-7xl text-white/70">OASIS</h1><div
+                    class="grid sm:grid-cols-3 gap-2 w-full"><div
+                      class="relative isolate [contain:layout_style] [perspective:600px] transition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] will-change-transform"
+                      style="--m-x: 50%; --m-y: 50%; --r-x: 0deg; --r-y: 0deg; --bg-x: 50%; --bg-y: 50%; --duration: 300ms; --foil-size: 100%; --opacity: 0; --radius: 18px; --easing: ease; --transition: var(--duration) var(--easing);"><div
+                        class="h-full grid will-change-transform origin-center transition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] rounded-[var(--radius)] border hover:[--opacity:0.6] hover:[--duration:200ms] hover:[--easing:linear] hover:filter-none overflow-hidden backdrop-blur border-[#F3D567]"><div
+                          class="w-full h-full grid [grid-area:1/1] mix-blend-soft-light [clip-path:inset(0_0_0_0_round_var(--radius))]"><div
+                            class="bg-gradient-to-r from-white/60 backdrop-blur-xl flex flex-col justify-center items-center px-4 w-full h-28 sm:h-32 rounded-lg gap-2"><div
+                              class="text-3xl font-extrabold text-black drop-shadow-lg font-montserrat">TVL</div><div
+                              class="text-3xl font-extrabold text-syellow-base drop-shadow-lg">1.02M
+                              USD </div></div></div><div
+                          class="w-full h-full grid [grid-area:1/1] mix-blend-soft-light [clip-path:inset(0_0_1px_0_round_var(--radius))] opacity-[var(--opacity)] transition-opacity transition-background duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] will-change-background [background:radial-gradient(farthest-corner_circle_at_var(--m-x)_var(--m-y),_rgba(255,255,255,0.8)_10%,_rgba(255,255,255,0.65)_20%,_rgba(255,255,255,0)_90%)]"></div><div
+                          class="w-full h-full grid [grid-area:1/1] mix-blend-color-dodge opacity-[var(--opacity)] will-change-background transition-opacity [clip-path:inset(0_0_1px_0_round_var(--radius))] [background-blend-mode:hue_hue_hue_overlay] [background:var(--pattern),_var(--rainbow),_var(--diagonal),_var(--shade)] relative after:content-[''] after:grid-area-[inherit] after:bg-repeat-[inherit] after:bg-attachment-[inherit] after:bg-origin-[inherit] after:bg-clip-[inherit] after:bg-[inherit] after:mix-blend-exclusion after:[background-size:var(--foil-size),_200%_400%,_800%,_200%] after:[background-position:center,_0%_var(--bg-y),_calc(var(--bg-x)*_-1)_calc(var(--bg-y)*_-1),_var(--bg-x)_var(--bg-y)] after:[background-blend-mode:soft-light,_hue,_hard-light]"
+                          style="--step: 5%; --foil-svg: url(&quot;66ad747dab9d0b373f0e8e05e8e4685754a62bd1.svg&quot;); --pattern: var(--foil-svg) center/100% no-repeat; --rainbow: repeating-linear-gradient( 0deg,rgb(255,255,0) calc(var(--step) * 1),rgba(255,255,0,1) calc(var(--step) * 2),rgba(255,255,0,1) calc(var(--step) * 3),rgba(255,255,0,1) calc(var(--step) * 4),rgba(255,255,0,1) calc(var(--step) * 5),rgb(255,255,0) calc(var(--step) * 6),rgb(255,255,0) calc(var(--step) * 7) ) 0% var(--bg-y)/200% 700% no-repeat; --diagonal: repeating-linear-gradient( 128deg,#0e152e 0%,hsl(180,10%,60%) 3.8%,hsl(180,10%,60%) 4.5%,hsl(180,10%,60%) 5.2%,#0e152e 10%,#0e152e 12% ) var(--bg-x) var(--bg-y)/300% no-repeat; --shade: radial-gradient( farthest-corner circle at var(--m-x) var(--m-y),rgba(255,255,255,0.1) 12%,rgba(255,255,255,0.15) 20%,rgba(255,255,255,0.25) 120% ) var(--bg-x) var(--bg-y)/300% no-repeat; background-blend-mode: hue, hue, hue, overlay;"></div></div></div><div
+                      class="relative isolate [contain:layout_style] [perspective:600px] transition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] will-change-transform"
+                      style="--m-x: 67.90533291235774%; --m-y: 76.69752254262276%; --r-x: 0deg; --r-y: 0deg; --bg-x: 54.47633322808943%; --bg-y: 58.895840847540924%; --foil-size: 100%; --opacity: 0; --radius: 18px; --easing: ease; --transition: var(--duration) var(--easing);"><div
+                        class="h-full grid will-change-transform origin-center transition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] rounded-[var(--radius)] border hover:[--opacity:0.6] hover:[--duration:200ms] hover:[--easing:linear] hover:filter-none overflow-hidden backdrop-blur border-[#F3D567]"><div
+                          class="w-full h-full grid [grid-area:1/1] mix-blend-soft-light [clip-path:inset(0_0_0_0_round_var(--radius))]"><div
+                            class="bg-gradient-to-r from-white/60 backdrop-blur-xl flex flex-col justify-center items-center px-4 w-full h-28 sm:h-32 rounded-lg gap-2"><div
+                              class="text-3xl font-extrabold text-black drop-shadow-lg">NFTs
+                              Deposited</div><div
+                              class="text-3xl font-extrabold text-syellow-base drop-shadow-lg">87</div></div></div><div
+                          class="w-full h-full grid [grid-area:1/1] mix-blend-soft-light [clip-path:inset(0_0_1px_0_round_var(--radius))] opacity-[var(--opacity)] transition-opacity transition-background duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] will-change-background [background:radial-gradient(farthest-corner_circle_at_var(--m-x)_var(--m-y),_rgba(255,255,255,0.8)_10%,_rgba(255,255,255,0.65)_20%,_rgba(255,255,255,0)_90%)]"></div><div
+                          class="w-full h-full grid [grid-area:1/1] mix-blend-color-dodge opacity-[var(--opacity)] will-change-background transition-opacity [clip-path:inset(0_0_1px_0_round_var(--radius))] [background-blend-mode:hue_hue_hue_overlay] [background:var(--pattern),_var(--rainbow),_var(--diagonal),_var(--shade)] relative after:content-[''] after:grid-area-[inherit] after:bg-repeat-[inherit] after:bg-attachment-[inherit] after:bg-origin-[inherit] after:bg-clip-[inherit] after:bg-[inherit] after:mix-blend-exclusion after:[background-size:var(--foil-size),_200%_400%,_800%,_200%] after:[background-position:center,_0%_var(--bg-y),_calc(var(--bg-x)*_-1)_calc(var(--bg-y)*_-1),_var(--bg-x)_var(--bg-y)] after:[background-blend-mode:soft-light,_hue,_hard-light]"
+                          style="--step: 5%; --foil-svg: url(&quot;66ad747dab9d0b373f0e8e05e8e4685754a62bd1.svg&quot;); --pattern: var(--foil-svg) center/100% no-repeat; --rainbow: repeating-linear-gradient( 0deg,rgb(255,255,0) calc(var(--step) * 1),rgba(255,255,0,1) calc(var(--step) * 2),rgba(255,255,0,1) calc(var(--step) * 3),rgba(255,255,0,1) calc(var(--step) * 4),rgba(255,255,0,1) calc(var(--step) * 5),rgb(255,255,0) calc(var(--step) * 6),rgb(255,255,0) calc(var(--step) * 7) ) 0% var(--bg-y)/200% 700% no-repeat; --diagonal: repeating-linear-gradient( 128deg,#0e152e 0%,hsl(180,10%,60%) 3.8%,hsl(180,10%,60%) 4.5%,hsl(180,10%,60%) 5.2%,#0e152e 10%,#0e152e 12% ) var(--bg-x) var(--bg-y)/300% no-repeat; --shade: radial-gradient( farthest-corner circle at var(--m-x) var(--m-y),rgba(255,255,255,0.1) 12%,rgba(255,255,255,0.15) 20%,rgba(255,255,255,0.25) 120% ) var(--bg-x) var(--bg-y)/300% no-repeat; background-blend-mode: hue, hue, hue, overlay;"></div></div></div><div
+                      class="relative isolate [contain:layout_style] [perspective:600px] transition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] will-change-transform"
+                      style="--m-x: 2.986315703693737%; --m-y: 81.63581275300331%; --r-x: 0deg; --r-y: 0deg; --bg-x: 38.24657892592344%; --bg-y: 60.541937584334434%; --foil-size: 100%; --opacity: 0; --radius: 18px; --easing: ease; --transition: var(--duration) var(--easing);"><div
+                        class="h-full grid will-change-transform origin-center transition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] rounded-[var(--radius)] border hover:[--opacity:0.6] hover:[--duration:200ms] hover:[--easing:linear] hover:filter-none overflow-hidden backdrop-blur border-[#F3D567]"><div
+                          class="w-full h-full grid [grid-area:1/1] mix-blend-soft-light [clip-path:inset(0_0_0_0_round_var(--radius))]"><div
+                            class="bg-gradient-to-r from-white/60 backdrop-blur-xl flex flex-col justify-center items-center px-4 w-full h-28 sm:h-32 rounded-lg gap-2"><div
+                              class="text-3xl font-extrabold text-black drop-shadow-lg">Total
+                              Debt</div><div
+                              class="text-3xl font-extrabold text-syellow-base drop-shadow-lg">776.86K
+                              USD</div></div></div><div
+                          class="w-full h-full grid [grid-area:1/1] mix-blend-soft-light [clip-path:inset(0_0_1px_0_round_var(--radius))] opacity-[var(--opacity)] transition-opacity transition-background duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] will-change-background [background:radial-gradient(farthest-corner_circle_at_var(--m-x)_var(--m-y),_rgba(255,255,255,0.8)_10%,_rgba(255,255,255,0.65)_20%,_rgba(255,255,255,0)_90%)]"></div><div
+                          class="w-full h-full grid [grid-area:1/1] mix-blend-color-dodge opacity-[var(--opacity)] will-change-background transition-opacity [clip-path:inset(0_0_1px_0_round_var(--radius))] [background-blend-mode:hue_hue_hue_overlay] [background:var(--pattern),_var(--rainbow),_var(--diagonal),_var(--shade)] relative after:content-[''] after:grid-area-[inherit] after:bg-repeat-[inherit] after:bg-attachment-[inherit] after:bg-origin-[inherit] after:bg-clip-[inherit] after:bg-[inherit] after:mix-blend-exclusion after:[background-size:var(--foil-size),_200%_400%,_800%,_200%] after:[background-position:center,_0%_var(--bg-y),_calc(var(--bg-x)*_-1)_calc(var(--bg-y)*_-1),_var(--bg-x)_var(--bg-y)] after:[background-blend-mode:soft-light,_hue,_hard-light]"
+                          style="--step: 5%; --foil-svg: url(&quot;66ad747dab9d0b373f0e8e05e8e4685754a62bd1.svg&quot;); --pattern: var(--foil-svg) center/100% no-repeat; --rainbow: repeating-linear-gradient( 0deg,rgb(255,255,0) calc(var(--step) * 1),rgba(255,255,0,1) calc(var(--step) * 2),rgba(255,255,0,1) calc(var(--step) * 3),rgba(255,255,0,1) calc(var(--step) * 4),rgba(255,255,0,1) calc(var(--step) * 5),rgb(255,255,0) calc(var(--step) * 6),rgb(255,255,0) calc(var(--step) * 7) ) 0% var(--bg-y)/200% 700% no-repeat; --diagonal: repeating-linear-gradient( 128deg,#0e152e 0%,hsl(180,10%,60%) 3.8%,hsl(180,10%,60%) 4.5%,hsl(180,10%,60%) 5.2%,#0e152e 10%,#0e152e 12% ) var(--bg-x) var(--bg-y)/300% no-repeat; --shade: radial-gradient( farthest-corner circle at var(--m-x) var(--m-y),rgba(255,255,255,0.1) 12%,rgba(255,255,255,0.15) 20%,rgba(255,255,255,0.25) 120% ) var(--bg-x) var(--bg-y)/300% no-repeat; background-blend-mode: hue, hue, hue, overlay;"></div></div></div></div></div></div><div
+                class="flex w-full flex-col interact-button max-w-5xl"><div data-slot="base"
+                  class="inline-flex rounded-xl" aria-label="Options"><div
+                    data-slot="tabList"
+                    class="flex h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide w-full relative rounded-none p-0 border-b border-divider justify-evenly sm:justify-between first:rounded-tl-2xl last:rounded-tr-2xl bg-[#343432]"
+                    id="react-aria1411531078-:r64:" aria-label="Options"
+                    role="tablist" aria-orientation="horizontal"><button
+                      data-selected="true" data-slot="tab" tabindex="0"
+                      data-key="dashboard"
+                      id="react-aria1411531078-:r64:-tab-dashboard"
+                      aria-selected="true"
+                      aria-controls="react-aria1411531078-:r64:-tabpanel-dashboard"
+                      role="tab"
+                      class="z-0 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 rounded-small text-xs sm:text-xl font-montserrat font-bold h-8 sm:h-14 w-min sm:w-full px-0.5 sm:px-2"
+                      type="button"><span
+                        class="absolute z-0 inset-0 bg-background dark:bg-default shadow-small w-full !bg-syellow-base rounded-none"
+                        data-slot="cursor" style="opacity: 1;"></span><div
+                        class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-black"
+                        data-slot="tabContent"><div
+                          class="flex items-center space-x-1 sm:space-x-2"><span>Dashboard</span></div></div></button><button
+                      data-slot="tab" tabindex="-1" data-key="collateral"
+                      id="react-aria1411531078-:r64:-tab-collateral"
+                      aria-selected="false" role="tab"
+                      class="z-0 py-1 group relative cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 rounded-small text-xs sm:text-xl font-montserrat font-bold h-8 sm:h-14 sm:w-full px-0.5 sm:px-2 w-full flex items-center justify-center"
+                      type="button"><div
+                        class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-black"
+                        data-slot="tabContent"><div
+                          class="flex items-center space-x-1 sm:space-x-2"><span>Collateral</span></div></div></button><button
+                      data-slot="tab" tabindex="-1" data-key="borrow"
+                      id="react-aria1411531078-:r64:-tab-borrow"
+                      aria-selected="false" role="tab"
+                      class="z-0 py-1 group relative cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 rounded-small text-xs sm:text-xl font-montserrat font-bold h-8 sm:h-14 sm:w-full px-0.5 sm:px-2 w-full flex items-center justify-center"
+                      type="button"><div
+                        class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-black"
+                        data-slot="tabContent"><div
+                          class="flex items-center space-x-1 sm:space-x-2"><span>Borrow</span></div></div></button><button
+                      data-slot="tab" tabindex="-1" data-key="staking"
+                      id="react-aria1411531078-:r64:-tab-staking"
+                      aria-selected="false" role="tab"
+                      class="z-0 py-1 group relative cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 rounded-small text-xs sm:text-xl font-montserrat font-bold h-8 sm:h-14 sm:w-full px-0.5 sm:px-2 w-full flex items-center justify-center"
+                      type="button"><div
+                        class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-black"
+                        data-slot="tabContent"><div
+                          class="flex items-center space-x-1 sm:space-x-2"><span>Staking</span></div></div></button><button
+                      data-slot="tab" tabindex="-1" data-key="auctions"
+                      id="react-aria1411531078-:r64:-tab-auctions"
+                      aria-selected="false" role="tab"
+                      class="z-0 py-1 group relative cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 rounded-small text-xs sm:text-xl font-montserrat font-bold h-8 sm:h-14 sm:w-full px-0.5 sm:px-2 w-full flex items-center justify-center"
+                      type="button"><div
+                        class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-black"
+                        data-slot="tabContent"><div
+                          class="flex items-center space-x-1 sm:space-x-2"><span>Auctions</span></div></div></button></div></div><div
+                  data-focus="false" data-focus-visible="false"
+                  id="react-aria1411531078-:r64:-tabpanel-dashboard"
+                  aria-labelledby="react-aria1411531078-:r64:-tab-dashboard"
+                  role="tabpanel"
+                  class="py-3 px-1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 bg-gradient-to-b from-[#343432] from-50% to-transparent"
+                  data-slot="panel"><div
+                    class="w-full flex items-center justify-center pt-4 pb-4"><div
+                      class="w-full max-w-6xl flex flex-col gap-6 text-xl sm:px-2"><div
+                        class="flex flex-col gap-4 px-4"><div
+                          class="flex gap-4 items-center"><svg
+                            stroke="currentColor" fill="currentColor"
+                            stroke-width="0" viewBox="0 0 576 512"
+                            class="h-6 w-6" height="1em" width="1em"
+                            xmlns="http://www.w3.org/2000/svg"><path
+                              d="M64 0C28.7 0 0 28.7 0 64V416c0 35.3 28.7 64 64 64H80l16 32h64l16-32H400l16 32h64l16-32h16c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zM224 320a80 80 0 1 0 0-160 80 80 0 1 0 0 160zm0-240a160 160 0 1 1 0 320 160 160 0 1 1 0-320zM480 221.3V336c0 8.8-7.2 16-16 16s-16-7.2-16-16V221.3c-18.6-6.6-32-24.4-32-45.3c0-26.5 21.5-48 48-48s48 21.5 48 48c0 20.9-13.4 38.7-32 45.3z"></path></svg><div
+                            class="font-bold text-2xl">ALL
+                            VAULTS</div></div><div
+                          class="flex flex-col gap-2"><div class><div
+                              class="font-semibold text-lg text-[#fbd654]">GET
+                              CREDIT ON YOUR DIGITAL ASSETS</div><div
+                              class="text-base text-gray-400 font-light">Borrow
+                              <a
+                                class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium no-underline hover:opacity-80 active:opacity-disabled transition-opacity text-[#fbd654]"
+                                tabindex="0" role="link"
+                                href="https://curve.fi/#/ethereum/pools/factory-stable-ng-118/deposit"
+                                rel="noopener noreferrer"
+                                target="_blank">ShezUSD<svg aria-hidden="true"
+                                  fill="none" focusable="false" height="1em"
+                                  shape-rendering="geometricPrecision"
+                                  stroke="currentColor" stroke-linecap="round"
+                                  stroke-linejoin="round" stroke-width="1.5"
+                                  viewBox="0 0 24 24" width="1em"
+                                  class="flex mx-1 text-current self-center"><path
+                                    d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path
+                                    d="M15 3h6v6"></path><path
+                                    d="M10 14L21 3"></path></svg></a> at the
+                              lowest rate on the market and farm in the OASIS
+                              pools</div></div><div
+                            class="grid sm:grid-cols-3 gap-4 mt-14"><div
+                              class="rounded-xl w-full flex flex-col justify-between gap-2 font-montserrat bg-gradient-to-br from-yellow-500 to-black"><div
+                                class="px-4 pt-4 flex flex-col gap-2"><div
+                                  class="flex justify-between items-center"><div
+                                    class="flex flex-col gap-1"><div
+                                      class="flex gap-2 items-center"><h2
+                                        class="text-3xl font-bold">Pharaoh</h2></div><div
+                                      class="flex w-full text-2xl font-bold gap-4"><div
+                                        class="text-bold capitalize flex items-center gap-2 text-syellow-base"><div
+                                          class="relative shadow-black/5 shadow-none rounded-large"
+                                          style="max-width: 24px;"> <img
+                                            alt="Collateral Icon" loading="lazy"
+                                            width="24" height="24"
+                                            decoding="async" data-nimg="1"
+                                            class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                            srcset="shezUSD-1.png 1x, shezUSD.png 2x"
+                                            src="shezUSD.png"
+                                            style="color: transparent;"
+                                            data-loaded="true"></div><div>3%
+                                        </div></div></div></div><div
+                                    class="relative shadow-black/5 shadow-none rounded-large"
+                                    style="max-width: 125px;"> <img
+                                      alt="Collateral Icon" loading="lazy"
+                                      width="125" height="125" decoding="async"
+                                      data-nimg="1"
+                                      class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-16 w-16 rounded-full object-cover"
+                                      srcset="pharaoh-1.jpg 1x, pharaoh.jpg 2x"
+                                      src="pharaoh.jpg"
+                                      style="color: transparent;"
+                                      data-loaded="true"></div></div><div
+                                  class="flex w-full justify-between text-sm font-bold gap-2"><p>DEPOSITS
+                                    <span
+                                      class="text-syellow-base">87</span></p><div
+                                    class="flex flex-col"><p>USD FLOOR <span
+                                        class="text-syellow-base">5675.99</span></p></div></div></div><div
+                                class="bg-white/30 p-4 rounded-b-xl text-xs font-bold flex flex-col gap-2 h-28"><div
+                                  class><p>AVAILABLE TO BORROW</p></div><div
+                                  class="grid grid-cols-6 gap-2 items-center"><div
+                                    class="col-span-2 flex items-center gap-2"><div
+                                      class="relative shadow-black/5 shadow-none rounded-large"
+                                      style="max-width: 24px;"> <img
+                                        alt="Collateral Icon" loading="lazy"
+                                        width="24" height="24" decoding="async"
+                                        data-nimg="1"
+                                        class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                        srcset="shezUSD-1.png 1x, shezUSD.png 2x"
+                                        src="shezUSD.png"
+                                        style="color: transparent;"
+                                        data-loaded="true"></div><div>12.26</div></div><div
+                                    class="flex flex-col gap-2 w-full max-w-[200px] col-span-3"
+                                    id="react-aria1411531078-:r68:"
+                                    aria-label="ETH Available" aria-valuenow="0"
+                                    aria-valuemin="0" aria-valuemax="100"
+                                    aria-valuetext="0%" role="progressbar"><div
+                                      class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"><div
+                                        class="h-full bg-success rounded-full transition-transform !duration-500"
+                                        style="transform: translateX(-100%);"></div></div></div><div>0.00%</div></div></div></div><div
+                              class="rounded-xl w-full flex flex-col justify-between gap-2 font-montserrat bg-gradient-to-br from-blue-500 to-black"><div
+                                class="px-4 pt-4 flex flex-col gap-2"><div
+                                  class="flex justify-between items-center"><div
+                                    class="flex flex-col gap-1"><div
+                                      class="flex gap-2 items-center"><h2
+                                        class="text-3xl font-bold">USDC</h2></div><div
+                                      class="flex w-full text-2xl font-bold gap-4"><div
+                                        class="text-bold capitalize flex items-center gap-2 text-syellow-base"><div
+                                          class="relative shadow-black/5 shadow-none rounded-large"
+                                          style="max-width: 24px;"> <img
+                                            alt="Collateral Icon" loading="lazy"
+                                            width="24" height="24"
+                                            decoding="async" data-nimg="1"
+                                            class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                            srcset="shezUSD-1.png 1x, shezUSD.png 2x"
+                                            src="shezUSD.png"
+                                            style="color: transparent;"
+                                            data-loaded="true"></div><div>1%
+                                        </div></div></div></div><div
+                                    class="relative shadow-black/5 shadow-none rounded-large"
+                                    style="max-width: 125px;"> <img
+                                      alt="Collateral Icon" loading="lazy"
+                                      width="125" height="125" decoding="async"
+                                      data-nimg="1"
+                                      class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-16 w-16 rounded-full object-cover"
+                                      srcset="usdc-1.png 1x, usdc.png 2x"
+                                      src="usdc.png" style="color: transparent;"
+                                      data-loaded="true"></div></div><div
+                                  class="flex w-full justify-between text-sm font-bold gap-2"><p>DEPOSITS
+                                    <span
+                                      class="text-syellow-base">112.48K</span></p><div
+                                    class="flex flex-col"><p>USD FLOOR <span
+                                        class="text-syellow-base">1.00</span></p></div></div></div><div
+                                class="bg-white/30 p-4 rounded-b-xl text-xs font-bold flex flex-col gap-2 h-28"><div
+                                  class><p>AVAILABLE TO BORROW</p></div><div
+                                  class="grid grid-cols-6 gap-2 items-center"><div
+                                    class="col-span-2 flex items-center gap-2"><div
+                                      class="relative shadow-black/5 shadow-none rounded-large"
+                                      style="max-width: 24px;"> <img
+                                        alt="Collateral Icon" loading="lazy"
+                                        width="24" height="24" decoding="async"
+                                        data-nimg="1"
+                                        class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                        srcset="shezUSD-1.png 1x, shezUSD.png 2x"
+                                        src="shezUSD.png"
+                                        style="color: transparent;"
+                                        data-loaded="true"></div><div>-52.8</div></div><div
+                                    class="flex flex-col gap-2 w-full max-w-[200px] col-span-3"
+                                    id="react-aria1411531078-:r6b:"
+                                    aria-label="ETH Available" aria-valuenow="0"
+                                    aria-valuemin="0" aria-valuemax="100"
+                                    aria-valuetext="0%" role="progressbar"><div
+                                      class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"><div
+                                        class="h-full bg-success rounded-full transition-transform !duration-500"
+                                        style="transform: translateX(-100%);"></div></div></div><div>-0.05%</div></div></div></div><div
+                              class="rounded-xl w-full flex flex-col justify-between gap-2 font-montserrat bg-gradient-to-br from-cyan-500 to-black"><div
+                                class="px-4 pt-4 flex flex-col gap-2"><div
+                                  class="flex justify-between items-center"><div
+                                    class="flex flex-col gap-1"><div
+                                      class="flex gap-2 items-center"><h2
+                                        class="text-3xl font-bold">wstETH</h2><button
+                                        data-slot="trigger"
+                                        aria-expanded="false"
+                                        class="z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased"
+                                        type="button"><svg stroke="currentColor"
+                                          fill="currentColor" stroke-width="0"
+                                          viewBox="0 0 512 512"
+                                          class="cursor-pointer" height="1em"
+                                          width="1em"
+                                          xmlns="http://www.w3.org/2000/svg"><path
+                                            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"></path></svg></button></div><div
+                                      class="flex w-full text-2xl font-bold gap-4"><div
+                                        class="text-bold capitalize flex items-center gap-2 text-syellow-base"><div
+                                          class="relative shadow-black/5 shadow-none rounded-large"
+                                          style="max-width: 24px;"> <img
+                                            alt="Collateral Icon" loading="lazy"
+                                            width="24" height="24"
+                                            decoding="async" data-nimg="1"
+                                            class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                            srcset="shezUSD-1.png 1x, shezUSD.png 2x"
+                                            src="shezUSD.png"
+                                            style="color: transparent;"
+                                            data-loaded="true"></div><div>2%
+                                        </div></div><div
+                                        class="text-bold capitalize flex items-center gap-2 text-syellow-base"><div
+                                          class="relative shadow-black/5 shadow-none rounded-large"
+                                          style="max-width: 24px;"> <img
+                                            alt="Collateral Icon" loading="lazy"
+                                            width="24" height="24"
+                                            decoding="async" data-nimg="1"
+                                            class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                            srcset="shezETH-1.png 1x, shezETH.png 2x"
+                                            src="shezETH.png"
+                                            style="color: transparent;"
+                                            data-loaded="true"></div><div>3%
+                                        </div></div></div></div><div
+                                    class="relative shadow-black/5 shadow-none rounded-large"
+                                    style="max-width: 125px;"> <img
+                                      alt="Collateral Icon" loading="lazy"
+                                      width="125" height="125" decoding="async"
+                                      data-nimg="1"
+                                      class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-16 w-16 rounded-full object-cover"
+                                      srcset="wstETH.png 1x, wstETH-1.png 2x"
+                                      src="wstETH-1.png"
+                                      style="color: transparent;"
+                                      data-loaded="true"></div></div><div
+                                  class="flex w-full justify-between text-sm font-bold gap-2"><p>DEPOSITS
+                                    <span
+                                      class="text-syellow-base">36.65</span></p><div
+                                    class="flex flex-col"><p>USD FLOOR <span
+                                        class="text-syellow-base">3415.20</span></p><p
+                                      class="text-bold text-sm capitalize">ETH
+                                      FLOOR <span
+                                        class="text-syellow-base">1.17</span></p></div></div></div><div
+                                class="bg-white/30 p-4 rounded-b-xl text-xs font-bold flex flex-col gap-2 h-28"><div
+                                  class><p>AVAILABLE TO BORROW</p></div><div
+                                  class="grid grid-cols-6 gap-2 items-center"><div
+                                    class="col-span-2 flex items-center gap-2"><div
+                                      class="relative shadow-black/5 shadow-none rounded-large"
+                                      style="max-width: 24px;"> <img
+                                        alt="Collateral Icon" loading="lazy"
+                                        width="24" height="24" decoding="async"
+                                        data-nimg="1"
+                                        class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                        srcset="shezUSD-1.png 1x, shezUSD.png 2x"
+                                        src="shezUSD.png"
+                                        style="color: transparent;"
+                                        data-loaded="true"></div><div>126.83K</div></div><div
+                                    class="flex flex-col gap-2 w-full max-w-[200px] col-span-3"
+                                    id="react-aria1411531078-:r6f:"
+                                    aria-label="ETH Available"
+                                    aria-valuenow="84.56" aria-valuemin="0"
+                                    aria-valuemax="100" aria-valuetext="85%"
+                                    role="progressbar"><div
+                                      class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"><div
+                                        class="h-full bg-success rounded-full transition-transform !duration-500"
+                                        style="transform: translateX(-15.44%);"></div></div></div><div>84.56%</div></div><div
+                                  class="grid grid-cols-6 gap-2 items-center"><div
+                                    class="col-span-2 flex items-center gap-2"><div
+                                      class="relative shadow-black/5 shadow-none rounded-large"
+                                      style="max-width: 24px;"> <img
+                                        alt="Collateral Icon" loading="lazy"
+                                        width="24" height="24" decoding="async"
+                                        data-nimg="1"
+                                        class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                        srcset="shezETH-1.png 1x, shezETH.png 2x"
+                                        src="shezETH.png"
+                                        style="color: transparent;"
+                                        data-loaded="true"></div><div>37.29</div></div><div
+                                    class="flex flex-col gap-2 w-full max-w-[200px] col-span-3"
+                                    id="react-aria1411531078-:r6i:"
+                                    aria-label="ETH Available"
+                                    aria-valuenow="74.57" aria-valuemin="0"
+                                    aria-valuemax="100" aria-valuetext="75%"
+                                    role="progressbar"><div
+                                      class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"><div
+                                        class="h-full bg-success rounded-full transition-transform !duration-500"
+                                        style="transform: translateX(-25.43%);"></div></div></div><div>74.57%</div></div></div></div><div
+                              class="rounded-xl w-full flex flex-col justify-between gap-2 font-montserrat bg-gradient-to-br from-purple-500 to-black"><div
+                                class="px-4 pt-4 flex flex-col gap-2"><div
+                                  class="flex justify-between items-center"><div
+                                    class="flex flex-col gap-1"><div
+                                      class="flex gap-2 items-center"><h2
+                                        class="text-3xl font-bold">weETH</h2><button
+                                        data-slot="trigger"
+                                        aria-expanded="false"
+                                        class="z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased"
+                                        type="button"><svg stroke="currentColor"
+                                          fill="currentColor" stroke-width="0"
+                                          viewBox="0 0 512 512"
+                                          class="cursor-pointer" height="1em"
+                                          width="1em"
+                                          xmlns="http://www.w3.org/2000/svg"><path
+                                            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"></path></svg></button></div><div
+                                      class="flex w-full text-2xl font-bold gap-4"><div
+                                        class="text-bold capitalize flex items-center gap-2 text-syellow-base"><div
+                                          class="relative shadow-black/5 shadow-none rounded-large"
+                                          style="max-width: 24px;"> <img
+                                            alt="Collateral Icon" loading="lazy"
+                                            width="24" height="24"
+                                            decoding="async" data-nimg="1"
+                                            class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                            srcset="shezUSD-1.png 1x, shezUSD.png 2x"
+                                            src="shezUSD.png"
+                                            style="color: transparent;"
+                                            data-loaded="true"></div><div>3%
+                                        </div></div><div
+                                        class="text-bold capitalize flex items-center gap-2 text-syellow-base"><div
+                                          class="relative shadow-black/5 shadow-none rounded-large"
+                                          style="max-width: 24px;"> <img
+                                            alt="Collateral Icon" loading="lazy"
+                                            width="24" height="24"
+                                            decoding="async" data-nimg="1"
+                                            class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                            srcset="shezETH-1.png 1x, shezETH.png 2x"
+                                            src="shezETH.png"
+                                            style="color: transparent;"
+                                            data-loaded="true"></div><div>3%
+                                        </div></div></div></div><div
+                                    class="relative shadow-black/5 shadow-none rounded-large"
+                                    style="max-width: 125px;"> <img
+                                      alt="Collateral Icon" loading="lazy"
+                                      width="125" height="125" decoding="async"
+                                      data-nimg="1"
+                                      class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-16 w-16 rounded-full object-cover"
+                                      src="weeth.svg"
+                                      style="color: transparent;"
+                                      data-loaded="true"></div></div><div
+                                  class="flex w-full justify-between text-sm font-bold gap-2"><p>DEPOSITS
+                                    <span
+                                      class="text-syellow-base">12.91</span></p><div
+                                    class="flex flex-col"><p>USD FLOOR <span
+                                        class="text-syellow-base">3039.40</span></p><p
+                                      class="text-bold text-sm capitalize">ETH
+                                      FLOOR <span
+                                        class="text-syellow-base">1.04</span></p></div></div></div><div
+                                class="bg-white/30 p-4 rounded-b-xl text-xs font-bold flex flex-col gap-2 h-28"><div
+                                  class><p>AVAILABLE TO BORROW</p></div><div
+                                  class="grid grid-cols-6 gap-2 items-center"><div
+                                    class="col-span-2 flex items-center gap-2"><div
+                                      class="relative shadow-black/5 shadow-none rounded-large"
+                                      style="max-width: 24px;"> <img
+                                        alt="Collateral Icon" loading="lazy"
+                                        width="24" height="24" decoding="async"
+                                        data-nimg="1"
+                                        class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                        srcset="shezUSD-1.png 1x, shezUSD.png 2x"
+                                        src="shezUSD.png"
+                                        style="color: transparent;"
+                                        data-loaded="true"></div><div>44.53K</div></div><div
+                                    class="flex flex-col gap-2 w-full max-w-[200px] col-span-3"
+                                    id="react-aria1411531078-:r6m:"
+                                    aria-label="ETH Available"
+                                    aria-valuenow="89.07" aria-valuemin="0"
+                                    aria-valuemax="100" aria-valuetext="89%"
+                                    role="progressbar"><div
+                                      class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"><div
+                                        class="h-full bg-success rounded-full transition-transform !duration-500"
+                                        style="transform: translateX(-10.93%);"></div></div></div><div>89.07%</div></div><div
+                                  class="grid grid-cols-6 gap-2 items-center"><div
+                                    class="col-span-2 flex items-center gap-2"><div
+                                      class="relative shadow-black/5 shadow-none rounded-large"
+                                      style="max-width: 24px;"> <img
+                                        alt="Collateral Icon" loading="lazy"
+                                        width="24" height="24" decoding="async"
+                                        data-nimg="1"
+                                        class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                        srcset="shezETH-1.png 1x, shezETH.png 2x"
+                                        src="shezETH.png"
+                                        style="color: transparent;"
+                                        data-loaded="true"></div><div>12.98</div></div><div
+                                    class="flex flex-col gap-2 w-full max-w-[200px] col-span-3"
+                                    id="react-aria1411531078-:r6p:"
+                                    aria-label="ETH Available"
+                                    aria-valuenow="64.92" aria-valuemin="0"
+                                    aria-valuemax="100" aria-valuetext="65%"
+                                    role="progressbar"><div
+                                      class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"><div
+                                        class="h-full bg-success rounded-full transition-transform !duration-500"
+                                        style="transform: translateX(-35.08%);"></div></div></div><div>64.92%</div></div></div></div><div
+                              class="rounded-xl w-full flex flex-col justify-between gap-2 font-montserrat bg-gradient-to-br from-gray-400 to-black"><div
+                                class="px-4 pt-4 flex flex-col gap-2"><div
+                                  class="flex justify-between items-center"><div
+                                    class="flex flex-col gap-1"><div
+                                      class="flex gap-2 items-center"><h2
+                                        class="text-3xl font-bold">sUSDe</h2><button
+                                        data-slot="trigger"
+                                        aria-expanded="false"
+                                        class="z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased"
+                                        type="button"><svg stroke="currentColor"
+                                          fill="currentColor" stroke-width="0"
+                                          viewBox="0 0 512 512"
+                                          class="cursor-pointer" height="1em"
+                                          width="1em"
+                                          xmlns="http://www.w3.org/2000/svg"><path
+                                            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"></path></svg></button></div><div
+                                      class="flex w-full text-2xl font-bold gap-4"><div
+                                        class="text-bold capitalize flex items-center gap-2 text-syellow-base"><div
+                                          class="relative shadow-black/5 shadow-none rounded-large"
+                                          style="max-width: 24px;"> <img
+                                            alt="Collateral Icon" loading="lazy"
+                                            width="24" height="24"
+                                            decoding="async" data-nimg="1"
+                                            class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                            srcset="shezUSD-1.png 1x, shezUSD.png 2x"
+                                            src="shezUSD.png"
+                                            style="color: transparent;"
+                                            data-loaded="true"></div><div>3%
+                                        </div></div></div></div><div
+                                    class="relative shadow-black/5 shadow-none rounded-large"
+                                    style="max-width: 125px;"> <img
+                                      alt="Collateral Icon" loading="lazy"
+                                      width="125" height="125" decoding="async"
+                                      data-nimg="1"
+                                      class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-16 w-16 rounded-full object-cover"
+                                      src="sUSDE.svg"
+                                      style="color: transparent;"
+                                      data-loaded="true"></div></div><div
+                                  class="flex w-full justify-between text-sm font-bold gap-2"><p>DEPOSITS
+                                    <span
+                                      class="text-syellow-base">66.64K</span></p><div
+                                    class="flex flex-col"><p>USD FLOOR <span
+                                        class="text-syellow-base">1.09</span></p></div></div></div><div
+                                class="bg-white/30 p-4 rounded-b-xl text-xs font-bold flex flex-col gap-2 h-28"><div
+                                  class><p>AVAILABLE TO BORROW</p></div><div
+                                  class="grid grid-cols-6 gap-2 items-center"><div
+                                    class="col-span-2 flex items-center gap-2"><div
+                                      class="relative shadow-black/5 shadow-none rounded-large"
+                                      style="max-width: 24px;"> <img
+                                        alt="Collateral Icon" loading="lazy"
+                                        width="24" height="24" decoding="async"
+                                        data-nimg="1"
+                                        class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                        srcset="shezUSD-1.png 1x, shezUSD.png 2x"
+                                        src="shezUSD.png"
+                                        style="color: transparent;"
+                                        data-loaded="true"></div><div>199.89K</div></div><div
+                                    class="flex flex-col gap-2 w-full max-w-[200px] col-span-3"
+                                    id="react-aria1411531078-:r6t:"
+                                    aria-label="ETH Available"
+                                    aria-valuenow="79.96000000000001"
+                                    aria-valuemin="0" aria-valuemax="100"
+                                    aria-valuetext="80%" role="progressbar"><div
+                                      class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"><div
+                                        class="h-full bg-success rounded-full transition-transform !duration-500"
+                                        style="transform: translateX(-20.04%);"></div></div></div><div>79.96%</div></div></div></div><div
+                              class="rounded-xl w-full flex flex-col justify-between gap-2 font-montserrat bg-gradient-to-br from-gray-600 to-black"><div
+                                class="px-4 pt-4 flex flex-col gap-2"><div
+                                  class="flex justify-between items-center"><div
+                                    class="flex flex-col gap-1"><div
+                                      class="flex gap-2 items-center"><h2
+                                        class="text-3xl font-bold">sfrxETH</h2><button
+                                        data-slot="trigger"
+                                        aria-expanded="false"
+                                        class="z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased"
+                                        type="button"><svg stroke="currentColor"
+                                          fill="currentColor" stroke-width="0"
+                                          viewBox="0 0 512 512"
+                                          class="cursor-pointer" height="1em"
+                                          width="1em"
+                                          xmlns="http://www.w3.org/2000/svg"><path
+                                            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"></path></svg></button></div><div
+                                      class="flex w-full text-2xl font-bold gap-4"><div
+                                        class="text-bold capitalize flex items-center gap-2 text-syellow-base"><div
+                                          class="relative shadow-black/5 shadow-none rounded-large"
+                                          style="max-width: 24px;"> <img
+                                            alt="Collateral Icon" loading="lazy"
+                                            width="24" height="24"
+                                            decoding="async" data-nimg="1"
+                                            class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                            srcset="shezETH-1.png 1x, shezETH.png 2x"
+                                            src="shezETH.png"
+                                            style="color: transparent;"
+                                            data-loaded="true"></div><div>0%
+                                        </div></div></div></div><div
+                                    class="relative shadow-black/5 shadow-none rounded-large"
+                                    style="max-width: 125px;"> <img
+                                      alt="Collateral Icon" loading="lazy"
+                                      width="125" height="125" decoding="async"
+                                      data-nimg="1"
+                                      class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-16 w-16 rounded-full object-cover"
+                                      src="sfrxETH.svg"
+                                      style="color: transparent;"
+                                      data-loaded="true"></div></div><div
+                                  class="flex w-full justify-between text-sm font-bold gap-2"><p>DEPOSITS
+                                    <span
+                                      class="text-syellow-base">26.02</span></p><div
+                                    class="flex flex-col"><p
+                                      class="text-bold text-sm capitalize">ETH
+                                      FLOOR <span
+                                        class="text-syellow-base">1.09</span></p></div></div></div><div
+                                class="bg-white/30 p-4 rounded-b-xl text-xs font-bold flex flex-col gap-2 h-28"><div
+                                  class><p>AVAILABLE TO BORROW</p></div><div
+                                  class="grid grid-cols-6 gap-2 items-center"><div
+                                    class="col-span-2 flex items-center gap-2"><div
+                                      class="relative shadow-black/5 shadow-none rounded-large"
+                                      style="max-width: 24px;"> <img
+                                        alt="Collateral Icon" loading="lazy"
+                                        width="24" height="24" decoding="async"
+                                        data-nimg="1"
+                                        class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                        srcset="shezETH-1.png 1x, shezETH.png 2x"
+                                        src="shezETH.png"
+                                        style="color: transparent;"
+                                        data-loaded="true"></div><div>25.15</div></div><div
+                                    class="flex flex-col gap-2 w-full max-w-[200px] col-span-3"
+                                    id="react-aria1411531078-:r71:"
+                                    aria-label="ETH Available"
+                                    aria-valuenow="50.29" aria-valuemin="0"
+                                    aria-valuemax="100" aria-valuetext="50%"
+                                    role="progressbar"><div
+                                      class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"><div
+                                        class="h-full bg-success rounded-full transition-transform !duration-500"
+                                        style="transform: translateX(-49.71%);"></div></div></div><div>50.29%</div></div></div></div><div
+                              class="rounded-xl w-full flex flex-col justify-between gap-2 font-montserrat bg-gradient-to-br from-blue-500 to-black"><div
+                                class="px-4 pt-4 flex flex-col gap-2"><div
+                                  class="flex justify-between items-center"><div
+                                    class="flex flex-col gap-1"><div
+                                      class="flex gap-2 items-center"><h2
+                                        class="text-3xl font-bold">wOETH</h2><button
+                                        data-slot="trigger"
+                                        aria-expanded="false"
+                                        class="z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased"
+                                        type="button"><svg stroke="currentColor"
+                                          fill="currentColor" stroke-width="0"
+                                          viewBox="0 0 512 512"
+                                          class="cursor-pointer" height="1em"
+                                          width="1em"
+                                          xmlns="http://www.w3.org/2000/svg"><path
+                                            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"></path></svg></button></div><div
+                                      class="flex w-full text-2xl font-bold gap-4"><div
+                                        class="text-bold capitalize flex items-center gap-2 text-syellow-base"><div
+                                          class="relative shadow-black/5 shadow-none rounded-large"
+                                          style="max-width: 24px;"> <img
+                                            alt="Collateral Icon" loading="lazy"
+                                            width="24" height="24"
+                                            decoding="async" data-nimg="1"
+                                            class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                            srcset="shezUSD-1.png 1x, shezUSD.png 2x"
+                                            src="shezUSD.png"
+                                            style="color: transparent;"
+                                            data-loaded="true"></div><div>3%
+                                        </div></div><div
+                                        class="text-bold capitalize flex items-center gap-2 text-syellow-base"><div
+                                          class="relative shadow-black/5 shadow-none rounded-large"
+                                          style="max-width: 24px;"> <img
+                                            alt="Collateral Icon" loading="lazy"
+                                            width="24" height="24"
+                                            decoding="async" data-nimg="1"
+                                            class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                            srcset="shezETH-1.png 1x, shezETH.png 2x"
+                                            src="shezETH.png"
+                                            style="color: transparent;"
+                                            data-loaded="true"></div><div>3%
+                                        </div></div></div></div><div
+                                    class="relative shadow-black/5 shadow-none rounded-large"
+                                    style="max-width: 125px;"> <img
+                                      alt="Collateral Icon" loading="lazy"
+                                      width="125" height="125" decoding="async"
+                                      data-nimg="1"
+                                      class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-16 w-16 rounded-full object-cover"
+                                      src="wOETH.svg"
+                                      style="color: transparent;"
+                                      data-loaded="true"></div></div><div
+                                  class="flex w-full justify-between text-sm font-bold gap-2"><p>DEPOSITS
+                                    <span
+                                      class="text-syellow-base">4.27</span></p><div
+                                    class="flex flex-col"><p>USD FLOOR <span
+                                        class="text-syellow-base">3196.01</span></p><p
+                                      class="text-bold text-sm capitalize">ETH
+                                      FLOOR <span
+                                        class="text-syellow-base">1.10</span></p></div></div></div><div
+                                class="bg-white/30 p-4 rounded-b-xl text-xs font-bold flex flex-col gap-2 h-28"><div
+                                  class><p>AVAILABLE TO BORROW</p></div><div
+                                  class="grid grid-cols-6 gap-2 items-center"><div
+                                    class="col-span-2 flex items-center gap-2"><div
+                                      class="relative shadow-black/5 shadow-none rounded-large"
+                                      style="max-width: 24px;"> <img
+                                        alt="Collateral Icon" loading="lazy"
+                                        width="24" height="24" decoding="async"
+                                        data-nimg="1"
+                                        class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                        srcset="shezUSD-1.png 1x, shezUSD.png 2x"
+                                        src="shezUSD.png"
+                                        style="color: transparent;"
+                                        data-loaded="true"></div><div>50.00K</div></div><div
+                                    class="flex flex-col gap-2 w-full max-w-[200px] col-span-3"
+                                    id="react-aria1411531078-:r75:"
+                                    aria-label="ETH Available"
+                                    aria-valuenow="100" aria-valuemin="0"
+                                    aria-valuemax="100" aria-valuetext="100%"
+                                    role="progressbar"><div
+                                      class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"><div
+                                        class="h-full bg-success rounded-full transition-transform !duration-500"
+                                        style="transform: translateX(0%);"></div></div></div><div>100.00%</div></div><div
+                                  class="grid grid-cols-6 gap-2 items-center"><div
+                                    class="col-span-2 flex items-center gap-2"><div
+                                      class="relative shadow-black/5 shadow-none rounded-large"
+                                      style="max-width: 24px;"> <img
+                                        alt="Collateral Icon" loading="lazy"
+                                        width="24" height="24" decoding="async"
+                                        data-nimg="1"
+                                        class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                        srcset="shezETH-1.png 1x, shezETH.png 2x"
+                                        src="shezETH.png"
+                                        style="color: transparent;"
+                                        data-loaded="true"></div><div>16.72</div></div><div
+                                    class="flex flex-col gap-2 w-full max-w-[200px] col-span-3"
+                                    id="react-aria1411531078-:r78:"
+                                    aria-label="ETH Available"
+                                    aria-valuenow="83.6" aria-valuemin="0"
+                                    aria-valuemax="100" aria-valuetext="84%"
+                                    role="progressbar"><div
+                                      class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"><div
+                                        class="h-full bg-success rounded-full transition-transform !duration-500"
+                                        style="transform: translateX(-16.4%);"></div></div></div><div>83.60%</div></div></div></div><div
+                              class="rounded-xl w-full flex flex-col justify-between gap-2 font-montserrat bg-gradient-to-br from-pink-500 to-black"><div
+                                class="px-4 pt-4 flex flex-col gap-2"><div
+                                  class="flex justify-between items-center"><div
+                                    class="flex flex-col gap-1"><div
+                                      class="flex gap-2 items-center"><h2
+                                        class="text-3xl font-bold">wETH</h2></div><div
+                                      class="flex w-full text-2xl font-bold gap-4"><div
+                                        class="text-bold capitalize flex items-center gap-2 text-syellow-base"><div
+                                          class="relative shadow-black/5 shadow-none rounded-large"
+                                          style="max-width: 24px;"> <img
+                                            alt="Collateral Icon" loading="lazy"
+                                            width="24" height="24"
+                                            decoding="async" data-nimg="1"
+                                            class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                            srcset="shezUSD-1.png 1x, shezUSD.png 2x"
+                                            src="shezUSD.png"
+                                            style="color: transparent;"
+                                            data-loaded="true"></div><div>3%
+                                        </div></div><div
+                                        class="text-bold capitalize flex items-center gap-2 text-syellow-base"><div
+                                          class="relative shadow-black/5 shadow-none rounded-large"
+                                          style="max-width: 24px;"> <img
+                                            alt="Collateral Icon" loading="lazy"
+                                            width="24" height="24"
+                                            decoding="async" data-nimg="1"
+                                            class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                            srcset="shezETH-1.png 1x, shezETH.png 2x"
+                                            src="shezETH.png"
+                                            style="color: transparent;"
+                                            data-loaded="true"></div><div>3%
+                                        </div></div></div></div><div
+                                    class="relative shadow-black/5 shadow-none rounded-large"
+                                    style="max-width: 125px;"> <img
+                                      alt="Collateral Icon" loading="lazy"
+                                      width="125" height="125" decoding="async"
+                                      data-nimg="1"
+                                      class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-16 w-16 rounded-full object-cover"
+                                      src="WETH.svg" style="color: transparent;"
+                                      data-loaded="true"></div></div><div
+                                  class="flex w-full justify-between text-sm font-bold gap-2"><p>DEPOSITS
+                                    <span
+                                      class="text-syellow-base">7.31</span></p><div
+                                    class="flex flex-col"><p>USD FLOOR <span
+                                        class="text-syellow-base">2909.92</span></p><p
+                                      class="text-bold text-sm capitalize">ETH
+                                      FLOOR <span
+                                        class="text-syellow-base">1.00</span></p></div></div></div><div
+                                class="bg-white/30 p-4 rounded-b-xl text-xs font-bold flex flex-col gap-2 h-28"><div
+                                  class><p>AVAILABLE TO BORROW</p></div><div
+                                  class="grid grid-cols-6 gap-2 items-center"><div
+                                    class="col-span-2 flex items-center gap-2"><div
+                                      class="relative shadow-black/5 shadow-none rounded-large"
+                                      style="max-width: 24px;"> <img
+                                        alt="Collateral Icon" loading="lazy"
+                                        width="24" height="24" decoding="async"
+                                        data-nimg="1"
+                                        class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                        srcset="shezUSD-1.png 1x, shezUSD.png 2x"
+                                        src="shezUSD.png"
+                                        style="color: transparent;"
+                                        data-loaded="true"></div><div>50.00K</div></div><div
+                                    class="flex flex-col gap-2 w-full max-w-[200px] col-span-3"
+                                    id="react-aria1411531078-:r7b:"
+                                    aria-label="ETH Available"
+                                    aria-valuenow="100" aria-valuemin="0"
+                                    aria-valuemax="100" aria-valuetext="100%"
+                                    role="progressbar"><div
+                                      class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"><div
+                                        class="h-full bg-success rounded-full transition-transform !duration-500"
+                                        style="transform: translateX(0%);"></div></div></div><div>100.00%</div></div><div
+                                  class="grid grid-cols-6 gap-2 items-center"><div
+                                    class="col-span-2 flex items-center gap-2"><div
+                                      class="relative shadow-black/5 shadow-none rounded-large"
+                                      style="max-width: 24px;"> <img
+                                        alt="Collateral Icon" loading="lazy"
+                                        width="24" height="24" decoding="async"
+                                        data-nimg="1"
+                                        class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                        srcset="shezETH-1.png 1x, shezETH.png 2x"
+                                        src="shezETH.png"
+                                        style="color: transparent;"
+                                        data-loaded="true"></div><div>14.77</div></div><div
+                                    class="flex flex-col gap-2 w-full max-w-[200px] col-span-3"
+                                    id="react-aria1411531078-:r7e:"
+                                    aria-label="ETH Available"
+                                    aria-valuenow="73.86" aria-valuemin="0"
+                                    aria-valuemax="100" aria-valuetext="74%"
+                                    role="progressbar"><div
+                                      class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"><div
+                                        class="h-full bg-success rounded-full transition-transform !duration-500"
+                                        style="transform: translateX(-26.14%);"></div></div></div><div>73.86%</div></div></div></div><div
+                              class="rounded-xl w-full flex flex-col justify-between gap-2 font-montserrat bg-gradient-to-br from-orange-500 to-black"><div
+                                class="px-4 pt-4 flex flex-col gap-2"><div
+                                  class="flex justify-between items-center"><div
+                                    class="flex flex-col gap-1"><div
+                                      class="flex gap-2 items-center"><h2
+                                        class="text-3xl font-bold">wBTC</h2></div><div
+                                      class="flex w-full text-2xl font-bold gap-4"><div
+                                        class="text-bold capitalize flex items-center gap-2 text-syellow-base"><div
+                                          class="relative shadow-black/5 shadow-none rounded-large"
+                                          style="max-width: 24px;"> <img
+                                            alt="Collateral Icon" loading="lazy"
+                                            width="24" height="24"
+                                            decoding="async" data-nimg="1"
+                                            class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                            srcset="shezUSD-1.png 1x, shezUSD.png 2x"
+                                            src="shezUSD.png"
+                                            style="color: transparent;"
+                                            data-loaded="true"></div><div>3%
+                                        </div></div></div></div><div
+                                    class="relative shadow-black/5 shadow-none rounded-large"
+                                    style="max-width: 125px;"> <img
+                                      alt="Collateral Icon" loading="lazy"
+                                      width="125" height="125" decoding="async"
+                                      data-nimg="1"
+                                      class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-16 w-16 rounded-full object-cover"
+                                      src="wbtc.svg" style="color: transparent;"
+                                      data-loaded="true"></div></div><div
+                                  class="flex w-full justify-between text-sm font-bold gap-2"><p>DEPOSITS
+                                    <span
+                                      class="text-syellow-base">0.93</span></p><div
+                                    class="flex flex-col"><p>USD FLOOR <span
+                                        class="text-syellow-base">60619.00</span></p></div></div></div><div
+                                class="bg-white/30 p-4 rounded-b-xl text-xs font-bold flex flex-col gap-2 h-28"><div
+                                  class><p>AVAILABLE TO BORROW</p></div><div
+                                  class="grid grid-cols-6 gap-2 items-center"><div
+                                    class="col-span-2 flex items-center gap-2"><div
+                                      class="relative shadow-black/5 shadow-none rounded-large"
+                                      style="max-width: 24px;"> <img
+                                        alt="Collateral Icon" loading="lazy"
+                                        width="24" height="24" decoding="async"
+                                        data-nimg="1"
+                                        class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                        srcset="shezUSD-1.png 1x, shezUSD.png 2x"
+                                        src="shezUSD.png"
+                                        style="color: transparent;"
+                                        data-loaded="true"></div><div>115.47K</div></div><div
+                                    class="flex flex-col gap-2 w-full max-w-[200px] col-span-3"
+                                    id="react-aria1411531078-:r7h:"
+                                    aria-label="ETH Available"
+                                    aria-valuenow="76.98" aria-valuemin="0"
+                                    aria-valuemax="100" aria-valuetext="77%"
+                                    role="progressbar"><div
+                                      class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"><div
+                                        class="h-full bg-success rounded-full transition-transform !duration-500"
+                                        style="transform: translateX(-23.02%);"></div></div></div><div>76.98%</div></div></div></div><div
+                              class="rounded-xl w-full flex flex-col justify-between gap-2 font-montserrat bg-gradient-to-br from-green-500 to-black"><div
+                                class="px-4 pt-4 flex flex-col gap-2"><div
+                                  class="flex justify-between items-center"><div
+                                    class="flex flex-col gap-1"><div
+                                      class="flex gap-2 items-center"><h2
+                                        class="text-3xl font-bold">CRV</h2></div><div
+                                      class="flex w-full text-2xl font-bold gap-4"><div
+                                        class="text-bold capitalize flex items-center gap-2 text-syellow-base"><div
+                                          class="relative shadow-black/5 shadow-none rounded-large"
+                                          style="max-width: 24px;"> <img
+                                            alt="Collateral Icon" loading="lazy"
+                                            width="24" height="24"
+                                            decoding="async" data-nimg="1"
+                                            class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                            srcset="shezUSD-1.png 1x, shezUSD.png 2x"
+                                            src="shezUSD.png"
+                                            style="color: transparent;"
+                                            data-loaded="true"></div><div>3%
+                                        </div></div></div></div><div
+                                    class="relative shadow-black/5 shadow-none rounded-large"
+                                    style="max-width: 125px;"> <img
+                                      alt="Collateral Icon" loading="lazy"
+                                      width="125" height="125" decoding="async"
+                                      data-nimg="1"
+                                      class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-16 w-16 rounded-full object-cover"
+                                      src="crv.svg" style="color: transparent;"
+                                      data-loaded="true"></div></div><div
+                                  class="flex w-full justify-between text-sm font-bold gap-2"><p>DEPOSITS
+                                    <span
+                                      class="text-syellow-base">2.22K</span></p><div
+                                    class="flex flex-col"><p>USD FLOOR <span
+                                        class="text-syellow-base">0.25</span></p></div></div></div><div
+                                class="bg-white/30 p-4 rounded-b-xl text-xs font-bold flex flex-col gap-2 h-28"><div
+                                  class><p>AVAILABLE TO BORROW</p></div><div
+                                  class="grid grid-cols-6 gap-2 items-center"><div
+                                    class="col-span-2 flex items-center gap-2"><div
+                                      class="relative shadow-black/5 shadow-none rounded-large"
+                                      style="max-width: 24px;"> <img
+                                        alt="Collateral Icon" loading="lazy"
+                                        width="24" height="24" decoding="async"
+                                        data-nimg="1"
+                                        class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                        srcset="shezUSD-1.png 1x, shezUSD.png 2x"
+                                        src="shezUSD.png"
+                                        style="color: transparent;"
+                                        data-loaded="true"></div><div>49.53K</div></div><div
+                                    class="flex flex-col gap-2 w-full max-w-[200px] col-span-3"
+                                    id="react-aria1411531078-:r7k:"
+                                    aria-label="ETH Available"
+                                    aria-valuenow="99.05" aria-valuemin="0"
+                                    aria-valuemax="100" aria-valuetext="99%"
+                                    role="progressbar"><div
+                                      class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"><div
+                                        class="h-full bg-success rounded-full transition-transform !duration-500"
+                                        style="transform: translateX(-0.95%);"></div></div></div><div>99.05%</div></div></div></div><div
+                              class="rounded-xl w-full flex flex-col justify-between gap-2 font-montserrat bg-gradient-to-br from-gray-600 to-black"><div
+                                class="px-4 pt-4 flex flex-col gap-2"><div
+                                  class="flex justify-between items-center"><div
+                                    class="flex flex-col gap-1"><div
+                                      class="flex gap-2 items-center"><h2
+                                        class="text-3xl font-bold">sFRAX</h2><button
+                                        data-slot="trigger"
+                                        aria-expanded="false"
+                                        class="z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased"
+                                        type="button"><svg stroke="currentColor"
+                                          fill="currentColor" stroke-width="0"
+                                          viewBox="0 0 512 512"
+                                          class="cursor-pointer" height="1em"
+                                          width="1em"
+                                          xmlns="http://www.w3.org/2000/svg"><path
+                                            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"></path></svg></button></div><div
+                                      class="flex w-full text-2xl font-bold gap-4"><div
+                                        class="text-bold capitalize flex items-center gap-2 text-syellow-base"><div
+                                          class="relative shadow-black/5 shadow-none rounded-large"
+                                          style="max-width: 24px;"> <img
+                                            alt="Collateral Icon" loading="lazy"
+                                            width="24" height="24"
+                                            decoding="async" data-nimg="1"
+                                            class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                            srcset="shezUSD-1.png 1x, shezUSD.png 2x"
+                                            src="shezUSD.png"
+                                            style="color: transparent;"
+                                            data-loaded="true"></div><div>3%
+                                        </div></div></div></div><div
+                                    class="relative shadow-black/5 shadow-none rounded-large"
+                                    style="max-width: 125px;"> <img
+                                      alt="Collateral Icon" loading="lazy"
+                                      width="125" height="125" decoding="async"
+                                      data-nimg="1"
+                                      class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-16 w-16 rounded-full object-cover"
+                                      src="sFrax.svg"
+                                      style="color: transparent;"
+                                      data-loaded="true"></div></div><div
+                                  class="flex w-full justify-between text-sm font-bold gap-2"><p>DEPOSITS
+                                    <span
+                                      class="text-syellow-base">0</span></p><div
+                                    class="flex flex-col"><p>USD FLOOR <span
+                                        class="text-syellow-base">1.07</span></p></div></div></div><div
+                                class="bg-white/30 p-4 rounded-b-xl text-xs font-bold flex flex-col gap-2 h-28"><div
+                                  class><p>AVAILABLE TO BORROW</p></div><div
+                                  class="grid grid-cols-6 gap-2 items-center"><div
+                                    class="col-span-2 flex items-center gap-2"><div
+                                      class="relative shadow-black/5 shadow-none rounded-large"
+                                      style="max-width: 24px;"> <img
+                                        alt="Collateral Icon" loading="lazy"
+                                        width="24" height="24" decoding="async"
+                                        data-nimg="1"
+                                        class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                        srcset="shezUSD-1.png 1x, shezUSD.png 2x"
+                                        src="shezUSD.png"
+                                        style="color: transparent;"
+                                        data-loaded="true"></div><div>100.00K</div></div><div
+                                    class="flex flex-col gap-2 w-full max-w-[200px] col-span-3"
+                                    id="react-aria1411531078-:r7o:"
+                                    aria-label="ETH Available"
+                                    aria-valuenow="100" aria-valuemin="0"
+                                    aria-valuemax="100" aria-valuetext="100%"
+                                    role="progressbar"><div
+                                      class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"><div
+                                        class="h-full bg-success rounded-full transition-transform !duration-500"
+                                        style="transform: translateX(0%);"></div></div></div><div>100.00%</div></div></div></div><div
+                              class="rounded-xl w-full flex flex-col justify-between gap-2 font-montserrat bg-gradient-to-br from-yellow-600 to-black"><div
+                                class="px-4 pt-4 flex flex-col gap-2"><div
+                                  class="flex justify-between items-center"><div
+                                    class="flex flex-col gap-1"><div
+                                      class="flex gap-2 items-center"><h2
+                                        class="text-3xl font-bold">ynETH</h2><button
+                                        data-slot="trigger"
+                                        aria-expanded="false"
+                                        class="z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased"
+                                        type="button"><svg stroke="currentColor"
+                                          fill="currentColor" stroke-width="0"
+                                          viewBox="0 0 512 512"
+                                          class="cursor-pointer" height="1em"
+                                          width="1em"
+                                          xmlns="http://www.w3.org/2000/svg"><path
+                                            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"></path></svg></button></div><div
+                                      class="flex w-full text-2xl font-bold gap-4"><div
+                                        class="text-bold capitalize flex items-center gap-2 text-syellow-base"><div
+                                          class="relative shadow-black/5 shadow-none rounded-large"
+                                          style="max-width: 24px;"> <img
+                                            alt="Collateral Icon" loading="lazy"
+                                            width="24" height="24"
+                                            decoding="async" data-nimg="1"
+                                            class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                            srcset="shezETH-1.png 1x, shezETH.png 2x"
+                                            src="shezETH.png"
+                                            style="color: transparent;"
+                                            data-loaded="true"></div><div>3%
+                                        </div></div></div></div><div
+                                    class="relative shadow-black/5 shadow-none rounded-large"
+                                    style="max-width: 125px;"> <img
+                                      alt="Collateral Icon" loading="lazy"
+                                      width="125" height="125" decoding="async"
+                                      data-nimg="1"
+                                      class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-16 w-16 rounded-full object-cover"
+                                      src="ynETH.svg"
+                                      style="color: transparent;"
+                                      data-loaded="true"></div></div><div
+                                  class="flex w-full justify-between text-sm font-bold gap-2"><p>DEPOSITS
+                                    <span
+                                      class="text-syellow-base">0</span></p><div
+                                    class="flex flex-col"><p
+                                      class="text-bold text-sm capitalize">ETH
+                                      FLOOR <span
+                                        class="text-syellow-base">1.00</span></p></div></div></div><div
+                                class="bg-white/30 p-4 rounded-b-xl text-xs font-bold flex flex-col gap-2 h-28"><div
+                                  class><p>AVAILABLE TO BORROW</p></div><div
+                                  class="grid grid-cols-6 gap-2 items-center"><div
+                                    class="col-span-2 flex items-center gap-2"><div
+                                      class="relative shadow-black/5 shadow-none rounded-large"
+                                      style="max-width: 24px;"> <img
+                                        alt="Collateral Icon" loading="lazy"
+                                        width="24" height="24" decoding="async"
+                                        data-nimg="1"
+                                        class="relative z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none transition-transform-opacity motion-reduce:transition-none !duration-300 h-6 w-6 rounded-full object-cover"
+                                        srcset="shezETH-1.png 1x, shezETH.png 2x"
+                                        src="shezETH.png"
+                                        style="color: transparent;"
+                                        data-loaded="true"></div><div>20</div></div><div
+                                    class="flex flex-col gap-2 w-full max-w-[200px] col-span-3"
+                                    id="react-aria1411531078-:r7s:"
+                                    aria-label="ETH Available"
+                                    aria-valuenow="100" aria-valuemin="0"
+                                    aria-valuemax="100" aria-valuetext="100%"
+                                    role="progressbar"><div
+                                      class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"><div
+                                        class="h-full bg-success rounded-full transition-transform !duration-500"
+                                        style="transform: translateX(0%);"></div></div></div><div>100.00%</div></div></div></div></div></div></div></div></div></div></div></div></div></div><footer
+          class="w-full flex justify-center mt-12 flex-col"><div
+            class="container mx-auto flex flex-col sm:flex-row px-6 py-12 sm:py-24 gap-24"><div
+              class="flex flex-col gap-2"><p
+                class="uppercase font-bold font-manrope">Others</p><hr
+                class="shrink-0 bg-divider border-none w-full h-divider"
+                role="separator"><a
+                class="relative inline-flex tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled transition-opacity w-full text-xl sm:text-2xl gap-3 items-center text-[#a1a1aa]"
+                tabindex="0" role="link"
+                href="https://app.uniswap.org/#/swap?inputCurrency=ETH&amp;outputCurrency=0x5fE72ed557d8a02FFf49B3B826792c765d5cE162"
+                rel="noopener noreferrer" target="_blank"><svg
+                  stroke="currentColor" fill="currentColor" stroke-width="0"
+                  viewBox="0 0 24 24" class="w-5 h-5" height="1em" width="1em"
+                  xmlns="http://www.w3.org/2000/svg"><path
+                    d="M21.5 9C21.5 11.7039 19.849 14.0223 17.5 15.0018L17.5 15C17.5 10.3056 13.6944 6.5 9.00001 6.5L8.99817 6.5C9.97773 4.15105 12.2961 2.5 15 2.5C18.5899 2.5 21.5 5.41015 21.5 9ZM7 3C4.79086 3 3 4.79086 3 7V8.5H5V7C5 5.89543 5.89543 5 7 5H8.5V3H7ZM19 15.5V17C19 18.1046 18.1046 19 17 19H15.5V21H17C19.2091 21 21 19.2091 21 17V15.5H19ZM9 21.5C12.5899 21.5 15.5 18.5899 15.5 15C15.5 11.4101 12.5899 8.5 9 8.5C5.41015 8.5 2.5 11.4101 2.5 15C2.5 18.5899 5.41015 21.5 9 21.5ZM9 12.5L11.5 15L9 17.5L6.5 15L9 12.5Z"></path></svg>Uniswap</a><a
+                class="relative inline-flex tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled transition-opacity w-full text-xl sm:text-2xl gap-3 items-center text-[#a1a1aa]"
+                tabindex="0" role="link"
+                href="https://curve.fi/#/ethereum/pools/factory-stable-ng-118/deposit"
+                rel="noopener noreferrer" target="_blank"><svg
+                  stroke="currentColor" fill="currentColor" stroke-width="0"
+                  viewBox="0 0 640 512" class="w-5 h-5" height="1em" width="1em"
+                  xmlns="http://www.w3.org/2000/svg"><path
+                    d="M296 136V88h48v48H296zM288 32c-26.5 0-48 21.5-48 48v4H121.6C111.2 62.7 89.3 48 64 48C28.7 48 0 76.7 0 112s28.7 64 64 64c25.3 0 47.2-14.7 57.6-36h66.9c-58.9 39.6-98.9 105-104 180H80c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48h-3.3c5.9-67 48.5-123.4 107.5-149.1c8.6 12.7 23.2 21.1 39.8 21.1h64c16.6 0 31.1-8.4 39.8-21.1c59 25.7 101.6 82.1 107.5 149.1H496c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48h-4.5c-5-75-45.1-140.4-104-180h66.9c10.4 21.3 32.3 36 57.6 36c35.3 0 64-28.7 64-64s-28.7-64-64-64c-25.3 0-47.2 14.7-57.6 36H400V80c0-26.5-21.5-48-48-48H288zM88 376h48v48H88V376zm416 48V376h48v48H504z"></path></svg>Curve</a></div><div
+              class="flex flex-col gap-2"><p
+                class="uppercase font-bold font-manrope">Socials</p><hr
+                class="shrink-0 bg-divider border-none w-full h-divider"
+                role="separator"><a
+                class="relative inline-flex tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled transition-opacity w-full text-xl sm:text-2xl gap-3 items-center text-[#a1a1aa]"
+                tabindex="0" role="link" href="https://t.me/shezmueth"
+                rel="noopener noreferrer" target="_blank"><svg
+                  stroke="currentColor" fill="currentColor" stroke-width="0"
+                  role="img" viewBox="0 0 24 24" class="w-5 h-5" height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"><title></title><path
+                    d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path></svg>
+                Telegram</a><a
+                class="relative inline-flex tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled transition-opacity w-full text-xl sm:text-2xl gap-3 items-center text-[#a1a1aa]"
+                tabindex="0" role="link" href="https://twitter.com/ShezmuTech"
+                rel="noopener noreferrer" target="_blank"><svg
+                  stroke="currentColor" fill="currentColor" stroke-width="0"
+                  role="img" viewBox="0 0 24 24" class="w-5 h-5" height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"><title></title><path
+                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg>Twitter</a><a
+                class="relative inline-flex tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled transition-opacity w-full text-xl sm:text-2xl gap-3 items-center text-[#a1a1aa]"
+                tabindex="0" role="link"
+                href="https://shezmu.gitbook.io/shezmu/introduction/welcome-to-shezmu"
+                rel="noopener noreferrer" target="_blank"><svg
+                  stroke="currentColor" fill="currentColor" stroke-width="0"
+                  role="img" viewBox="0 0 24 24" class="w-5 h-5" height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"><title></title><path
+                    d="M10.802 17.77a.703.703 0 11-.002 1.406.703.703 0 01.002-1.406m11.024-4.347a.703.703 0 11.001-1.406.703.703 0 01-.001 1.406m0-2.876a2.176 2.176 0 00-2.174 2.174c0 .233.039.465.115.691l-7.181 3.823a2.165 2.165 0 00-1.784-.937c-.829 0-1.584.475-1.95 1.216l-6.451-3.402c-.682-.358-1.192-1.48-1.138-2.502.028-.533.212-.947.493-1.107.178-.1.392-.092.62.027l.042.023c1.71.9 7.304 3.847 7.54 3.956.363.169.565.237 1.185-.057l11.564-6.014c.17-.064.368-.227.368-.474 0-.342-.354-.477-.355-.477-.658-.315-1.669-.788-2.655-1.25-2.108-.987-4.497-2.105-5.546-2.655-.906-.474-1.635-.074-1.765.006l-.252.125C7.78 6.048 1.46 9.178 1.1 9.397.457 9.789.058 10.57.006 11.539c-.08 1.537.703 3.14 1.824 3.727l6.822 3.518a2.175 2.175 0 002.15 1.862 2.177 2.177 0 002.173-2.14l7.514-4.073c.38.298.853.461 1.337.461A2.176 2.176 0 0024 12.72a2.176 2.176 0 00-2.174-2.174"></path></svg>Gitbook</a></div></div><div
+            class="container mx-auto flex flex-wrap items-center justify-between px-6 border-t-1 border-[#ecc63f] py-4 sm:py-8 gap-2"><div
+              class="flex items-start sm:items-center justify-center text-lg flex-wrap gap-2"><img
+                alt="Shezmu logo" loading="lazy" width="110" height="24"
+                decoding="async" data-nimg="1" style="color:transparent"
+                srcset="logo_nav-2.png 1x, logo_nav.png 2x"
+                src="logo_nav.png"><div class="flex gap-4"><a
+                  class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled text-[#a1a1aa] hover:text-[#fedd6a] transition text-sm sm:text-base min-w-max"
+                  tabindex="0" role="link"
+                  href="https://etherscan.io/address/0x5fe72ed557d8a02fff49b3b826792c765d5ce162"
+                  rel="noopener noreferrer" target="_blank">Shezmu</a><a
+                  class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled text-[#a1a1aa] hover:text-[#fedd6a] transition text-sm sm:text-base min-w-max"
+                  tabindex="0" role="link"
+                  href="https://etherscan.io/address/0x1d1B79A8C50Df0e11019f822cd3d7E5d485eBdAa"
+                  rel="noopener noreferrer" target="_blank">Guardian</a><a
+                  class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled text-[#a1a1aa] hover:text-[#fedd6a] transition text-sm sm:text-base min-w-max"
+                  tabindex="0" role="link"
+                  href="https://etherscan.io/token/0xd60eea80c83779a8a5bfcdac1f3323548e6bb62d"
+                  rel="noopener noreferrer"
+                  target="_blank">ShezUSD</a></div></div><p
+              class="text-sm sm:text-base text-[#ecc63f] text-center sm:text-right w-full sm:w-fit">©
+              <!-- -->2024<!-- --> Shezmu. All rights
+              reserved.</p></div></footer></main><div
+        class="Toastify"></div></div><next-route-announcer
+      style="position: absolute;"
+      data-scrapbook-shadowdom="<div aria-live=&quot;assertive&quot; id=&quot;__next-route-announcer__&quot; role=&quot;alert&quot; style=&quot;position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;&quot;></div>"></next-route-announcer><span
+      data-focus-scope-start="true" hidden></span><span
+      data-focus-scope-end="true" hidden></span><iframe id="verify-api"
+      src="index_1.html" style="display: none;"></iframe><iframe id="verify-api"
+      src="index_2.html" style="display: none;"></iframe>   </body></html>
